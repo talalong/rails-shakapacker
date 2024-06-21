@@ -1,33 +1,1238 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  search_form: &search_form
+    advanced_search: Advanced Search
+    simple_search: Simple Search
+  accounts:
+    account:
+      revise: Revise Oldest Company User
+    index:
+      license_since: Licence since
+      delete_unused_accounts: Delete Unused Accounts
+      csv_export: CSV Export
+      sites: Sites
+    destroy:
+      account_deleted: Account deleted
+      unused_accounts_deleted:
+        one: '%{count} unused account deleted'
+        other: '%{count} unused accounts deleted'
+    new:
+      title: Register company account and administrator
+    search_form:
+      <<: *search_form
+      placeholder_view: Select view ...
+      placeholder_companies_title: Company name
+      placeholder_installation_id: Installation ID
+      placeholder_cadmin_email: C-Admin Email
+      placeholder_title: Account name
+      placeholder_created_from: Created from
+      placeholder_created_until: Created until
+      placeholder_licensed_from: Licence created from
+      placeholder_licensed_until: Licence created until
+      placeholder_lak: Licence activation key
+      placeholder_company_mailbox: Mailbox digit number
+    show:
+      delete: Delete this account
+      revise_old_cadmin: Change oldest C-Admin email
+      mfa_active: 2FA active
+      company_users: Company admin users
+      basic_info: Basic information
+      lak: Applied licence activation keys
+      no_lak: No licence activation key applied
+      unlicensed_account: The account is unlicensed
+      block_account:
+        'true': 'Block this account'
+        'false': 'Unblock this account'
+      mfa:
+        'true': 'Yes'
+        'false': 'No'
+      add_comment: Add comment
+      edit_comment: Edit comment
+      comment_title: Comment
+  
+  activerecord:
+    attributes:
+      account:
+        created_at: Created at
+        time_zone: Time zone
+        title: Name
+        unused: Unused (can be deleted)
+      address:
+        city: City
+        country: Country
+        line_1: Line 1
+        line_2: Line 2
+        state: State
+        zip_code: Post code
+      answer:
+        action_plan: Action plan
+        alternative_assessor: Alternative assessor
+        approval_date: Approval date
+        approved: Approved
+        business_function: Business function
+        completion_date: Completion date
+        compliance: Compliance
+        cost: Cost
+        cost_currency: Currency
+        current_state: Current state
+        customer_contact: Customer contact
+        customer_response: Customer response
+        gap: Gap
+        responsibility: Responsibility
+        show_assessor_verifier: Alt. assessor / verifier
+        target_date: Target date
+        verifier: Alternative verifier
+        updated_at: Last updated at
+        dialog:
+          title: Unsaved Changes
+          subtitle: Beware that unsaved changes will be lost!
+          save: Save before closing
+          dont_save: Close without saving
+      assessment:
+        assessment_date: Assessment date
+        assessor: Assessor
+        assessor_email: Assessor email
+        assessor_telephone: Assessor telephone
+        author: Author
+        catalog: Catalogue
+        first_created_at: First created at
+        created_at: Created at
+        due_date: Due date
+        last_submitted_date: Last submitted date
+        manufacturing_site: Manufacturing site
+        profile: Profile
+        revision: Revision
+        shipping_site: Shipping site
+        site: { one: Site, other: Sites }
+        sent_at: Last sent time
+        status: Status
+        status/archived: Archived
+        status/completed: Completed
+        status/in_progress: In progress
+        status/in_review: In review
+        status/new: New
+        status/reviewed: Reviewed
+        title: Name
+        update_frequency: Update frequency
+        updated_at: Last updated at
+        verification_date: Verification date
+        verifying_assessor: Verifying assessor
+        verifying_assessor_email: Verifying assessor email
+        verifying_assessor_telephone: Verifying assessor phone
+        import_feedback: Include feedback
+        score: Score
+        rating: Rating
+        catalog_profile: Catalogue/Profile
+        include_answers_format: Include answers from
+        include_answers_xml: A XML file
+        include_answers_assessment: An existing assessment
+      catalog:
+        issuing_date: Issued date
+        languages: Languages
+        version: Version
+      company:
+        contact_name: Contact name
+        email: Contact email
+        role: Role
+        telephone: Contact telephone number
+        title: Name
+        partner: { one: Partner, other: Partners }
+        workflow_policy: MMOG.np workflow policy
+        assessment_mailbox: MMOG.np mailbox address
+        placeholder_assessment_mailbox: odette-1234@mail2.mmogle.com
+        active: Active
+        inactive: Inactive
+        created_at: Created at
+      license:
+        catalog_name: Catalogue name
+        catalog_version: Catalogue versions lower than
+        sites: Number of sites
+        mail: Mailbox address
+        license_key: Installation ID
+        availability_5: Version 5.0 (allocated/total)
+        availability_6: Version 6.0 (allocated/total)
+      partner_reference:
+        customer: Customer
+        manufacturing_site: Manufacturing site
+      site:
+        title: Name
+        catalog_version: Catalogue version
+      user:
+        email: E-Mail
+        email_confirmation: E-Mail confirmation
+        first_name: First name
+        full_name: Name
+        last_name: Last name
+        login: Login
+        password: Password
+        password_confirmation: Password confirmation
+        role: Role
+        site: Site
+        telephone: Telephone
+      user_session:
+        login: Login
+        password: Password
+      redeem:
+        site_amount: Sites
+
+    errors:
+      messages:
+        accepted: Must be accepted!
+        blank: Can't be blank!
+        confirmation: Doesn't match %{attribute}!
+        empty: Can't be empty!
+        equal_to: Must be equal to %{count}!
+        even: Must be even!
+        exclusion: Is reserved!
+        greater_than: Must be greater than %{count}!
+        greater_than_or_equal_to: Must be greater than or equal to %{count}!
+        inclusion: Is not included in the list!
+        invalid: Is invalid!
+        less_than: Must be less than %{count}!
+        less_than_or_equal_to: Must be less than or equal to %{count}!
+        model_invalid: 'Validation failed: %{errors}!'
+        not_a_number: Is not a number!
+        not_an_integer: Must be an integer!
+        odd: Must be odd!
+        other_than: Must be other than %{count}!
+        present: Must be blank!
+        required: Must exist!
+        taken: Already taken!
+        too_long:
+          one: Is too long (maximum is 1 character)!
+          other: Is too long (maximum is %{count} characters)!
+        too_short:
+          one: Is too short (minimum is 1 character)!
+          other: Is too short (minimum is %{count} characters)!
+        wrong_length:
+          one: Is the wrong length (should be 1 character)!
+          other: Is the wrong length (should be %{count} characters)!
+      models:
+        assessment:
+          attributes:
+            revision: Must be greater than or equal to 0!
+            status: 
+              inclusion: must be reviewed or completed for sending an assessment
+            site:
+              site_changed: Changing the site is not allowed
+            partner:
+              partner_changed: Changing the partner is not allowed
+        answer:
+          attributes:
+            approval_date:
+              blank: Can't be blank if customer contact is present!
+            customer_contact:
+              blank: Can't be blank if approval date is present!
+          record_not_unique: This answer was added before. Please reload the assessment 
+        company:
+          inactive: The sender is inactive.
+          attributes:
+            role:
+              inclusion: Invalid partner role!
+            assessment_mailbox:
+              invalid: Bad email format
+              taken_by: The email is already taken by %{name}.
+
+    models:
+      account:
+        one: Account
+        other: Accounts
+      address: Address
+      answer: Answer
+      assessment: { one: Assessment, other: Assessments }
+      catalog: Catalogue
+      chapter: Chapter
+      company: { one: Company, other: Companies }
+      criterion: Criterion
+      customer: Customer # FIXME: not a model name!
+      license: Licence
+      partner_references: Supplier numbers # FIXME: not a model name!
+      profile:
+        one: Profile
+        other: Profiles
+      related_assessments: Related assessments # FIXME: not a model name!
+      related_profiles: Related profiles # FIXME: not a model name!
+      requirement: Requirement
+      site: { one: Site, other: Sites }
+      sites: Sites # FIXME: use pluralization!
+      subchapter: Subchapter
+      user: { one: User, other: Users }
+      user_session: User session
+      users: Users # FIXME: use pluralization!
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      long: "%d %B %Y"
+      short: "%d %b %y"
+  activemodel:
+    models:
+      login_reminder: Login reminder
+      csv_import: Bulk imports
+    attributes:
+      login_reminder:
+        email: E-Mail
+      csv_import:
+        type: Type
+        file: CSV File
+        text: CSV Text
+        separator: Separator
+    errors:
+      messages:
+        blank: Can't be blank!
+        inclusion: Invalid value!
+      models:
+        login_reminder:
+          email: Invalid email adress!
+        csv_import:
+          no_data: No data!
+          bad_data: Erroneous CSV data. Please see details below!
+          missing_columns: 'Missing columns: %{names}!'
+          unknown_columns: 'Unknown columns: %{names}!'
+          invalid_encoding: 'Invalid encoding. Expected: UTF-8!'
+          unexpected_encoding_error: "Unexpected text encoding error: %{error}!"
+          unexpected_data_error: "Unexpected data error: %{error}!"
+
+  addresses:
+    address:
+      title: Address
+
+  assessment:
+    workflow:
+      log:
+        archived: archived
+        new: new
+        none: none yet
+        completed: completed
+        review_completed: review completed
+        review_exported: review exported
+        review_imported: imported from customer
+        review_started: review started
+        survey_completed: completed
+        survey_exported: results exported
+        survey_imported: imported from supplier
+        survey_started: started
+        sent_to_customer: sent to customer
+        sent_to_supplier: sent to supplier        
+    info_content:
+      mail_received_from_customer: Mail received from customer
+      mail_received_from_supplier: Mail received from supplier
+  assessments:
+    chart:
+      titles:
+        by_chapter: "%{catalog_name} Radar Chart by Chapter"
+        by_subchapter: "%{catalog_name} Radar Chart by Subchapter"
+        subchapters_by_chapter: Subchapter Radar Charts by Chapter
+      status_not_fulfilled: You must [complete/update/answer] to all criteria before the progression chart can be displayed
+    new:
+      title: New assessment
+      upload_info_message: To add answers from an existing assessment, please select or upload an assessment.
+      not_found: Assessment not found
+    edit:
+      title: Edit assessment
+      upload_info_message: 'Attention: Existing answers to the same criteria will be replaced!'
+      answers_deleted: Answers for old catalogue were deleted!
+    form:
+      import_feedback_hint: 'Attention: Initially the feedback is not visible in standard mode'
+    history:
+      author: Author
+      criterion: Criterion
+      change: Change
+      date: Date
+      role: Role
+      title: History
+      type: Level
+      changes:
+        attribute: Attribute
+        before: Before
+        after: After
+      event:
+        title: Event
+        import_xml: Imported XML
+        import_mail: "Imported from %{mail}"
+        export: Exported
+        sent: "Sent to %{mail}"
+        status: Status Change
+        configuration: Configuration Change
+        update: Updated
+        create: Created
+        mail_received: Mail received
+        mail_received_at: Mail received at
+        destroy: Destroyed
+        duplicate: "Copied from %{mail}"
+      search:
+        change: Search content
+        created_from: Date from
+        created_up_to: Date up to
+        placeholder_type: Select level
+        placeholder_event: Choose Event
+      history_not_complete: |
+        NOTE: This assessment was created before the implementation of Release 2.5 therefore earlier changes are not
+        fully described in the history.
+    versions_search_form:
+      event:
+        import_xml: Imported XML
+        import_mail: Imported from
+        export: Exported
+        sent: Sent to
+        status: Status Change
+        configuration: Configuration Change
+        update: Updated
+        create: Created
+        duplicate: Copied
+      type:
+        assessment: Assessment
+        answer: Answer
+    index:
+      customer_import: Import customer feedback
+      new: New assessment
+      select_assessment: Select assessment
+      supplier_import: Import supplier assessment
+      historical_import: Import historical assessment
+      assessment_sent: Sent
+      csv_export: CSV Export
+      csv_filename: assessments.csv
+      check_uncheck_all: select/deselect all
+      confirm_delete_multiple: Are you sure you want to delete these assessments?
+      confirm_delete_body: You want to delete all %{size} assessments?
+      delete_selection: Delete selected assessments on this page
+      delete_all: Delete on all pages (%{count})
+      duplicate_assessment: Duplicate assessment
+      missing_license_catalog: Missing licence for site [%{name}] and catalogue [%{version}].
+      title:
+        none: Assessments
+        supplier: Assessments from suppliers
+        customer: Assessments for customers
+    exchange:
+      successfully_sent: Assessment was sent successfully
+      error_missing_mail_config: Missing mail configuration for sending assessment
+    progression:
+      chart_heading: 'Chart - %{catalog} %{profile}'
+      table_heading: 'Chart Data - %{catalog} %{profile}'
+      gap_alert: |
+        Note: Some target dates exceed the progression period by more than one month!
+        They are accumulated in the last chart / table position.
+      no_action_plan_alert:
+        one: "NOTE: There is %{count} NON COMPLIANT criterion that does not have an Action Plan recorded."
+        other: "NOTE: There are %{count} NON COMPLIANT criteria that do not have Action Plans recorded."
+      month_ending: Month Ending
+      assessment_date: A. Dat
+      classification: Classification
+      compliant: Compliant
+      fx_nc_with_target_date: F%{weight} Non Compliant with Target Date
+      missing_or_past_due_target_date: Missing/Past Due Target Date
+      na_not_approved: N/A Not Approved
+      total_points: Total Points
+      total_score: Total Score %
+      future_score: Future Score %
+      fx_criteria: F%{weight} Criteria
+
+    score:
+      chapter_sumary_title: Chapter %{chapter_nr} Summary
+      chapter_table:
+        headings:
+          assessor: Assessor Name
+          chapter_nr: Ch.
+          requirement_nr: Req.
+          results: Result (Criteria scored x Weight of criteria)
+          score: Score
+          score_max: Max
+          score_percent: "% Comp"
+          verifier: Verifier Name
+      chapter_title: Chapter %{chapter_nr}
+      main_title: Overall Scoring Summary - %{profile}
+    export:
+      title: Assessment Export
+      perspective:
+        none: Both views
+        customer: Assessments for customers
+        supplier: Assessments from suppliers
+      queued: Your export will be prepared and sent to %{mail}
+      tips: This export function has been specifically developed for companies who manage a number of different sites and/or a large volume of assessments. Multiple filters allow data to be refined before being exported as a CSV file for further analysis and reporting. For more information on this function, please use the help menu and follow the tutorials.
+
+    scoring_assessment_info:
+      na_info_approved:
+        one: "%{count} criterion has been approved."
+        other: "%{count} criteria have been approved."
+      na_info_not_approved:
+        one: "%{count} criterion has NOT been approved."
+        other: "%{count} criteria have NOT been approved."
+      na_info_total:
+        one: There is %{count} criterion that has been assessed as Non Applicable (N/A).
+        other: There are %{count} criteria that have been assessed as Non Applicable (N/A).
+      note:
+        content: |
+          The Company Name, Site Address, Manufacturing and/or Shipping Supplier Codes, Assessment Date, Assessor, Assessor e-mail and Contact Number
+          must all be entered in order for the classification to be displayed.
+        title: Note
+      signature: Signature
+
+    scoring_definitions:
+      rating:
+        title: Classifications
+        descriptions:
+          full:
+            A:
+              definition: |
+                1. Compliance to all F3 criteria, and
+                2. Non-compliance to fewer than 10 F2 criteria, and
+                3. A total score of 90% or higher
+              explanation: |
+                The organization is compliant in all key criteria and can demonstrate that the supply chain management processes in use at the facility are best practice.
+                Annual assessments are carried out with the goal of ensuring sustainable and best practice processes.
+                In support of continual improvement, the development of an action plan should be considered in order to eliminate any remaining unmet criteria.
+            B:
+              definition: |
+                1. Compliance to all F3 criteria, and
+                2. Non-compliance of 10 to 15 F2 criteria, and
+                3. A total score greater than or equal to 75% and less than 90%
+              explanation: |
+                Although most of the fundamentals of supply chain management are demonstrated, the organization is deficient in several areas
+                that compromises the efficiency of internal performance and may impact its ability to support the needs of the customer.
+                An action plan should be developed and implemented in a timeframe that meets the needs of the business and its customer(s).
+            C:
+              definition: |
+                1. Non-compliance to any F3 criterion, or
+                2. Non-compliance to 16 or more F2 criteria, or
+                3. A total score less than 75%
+              explanation: |
+                The organization is deficient in one or more key areas of supply chain management.
+                This situation creates a high risk of disruption to customers and demonstrates a lack of efficiency and control of internal processes within the existing supply chain strategy.
+                Management commitment will be required to create, prioritize and implement action plans in a timely manner to avoid serious or prolonged issues with the customer.
+          basic: &basic_profile_definitions
+            A:
+              definition: |
+                1. Compliance to all F3 criteria, and
+                2. Non-compliance to fewer than 10 F2 criteria, and
+                3. Total score not considered in classification
+              explanation: |
+                The organization is compliant in all key criteria and can demonstrate that the supply chain management processes in use at the facility are best practice.
+                Annual assessments are carried out with the goal of ensuring sustainable and best practice processes.
+                In support of continual improvement, the development of an action plan should be considered in order to eliminate any remaining unmet criteria.
+            B:
+              definition: |
+                1. Compliance to all F3 criteria, and
+                2. Non-compliance of 10 to 15 F2 criteria, and
+                3. Total score not considered in classification
+              explanation: |
+                Although most of the fundamentals of supply chain management are demonstrated, the organization is deficient in several areas
+                that compromises the efficiency of internal performance and may impact its ability to support the needs of the customer.
+                An action plan should be developed and implemented in a timeframe that meets the needs of the business and its customer(s).
+            C:
+              definition: |
+                1. Non-compliance to any F3 criterion, or
+                2. Non-compliance to 16 or more F2 criteria, or
+                3. Total score not considered in classification
+              explanation: |
+                The organization is deficient in one or more key areas of supply chain management.
+                This situation creates a high risk of disruption to customers and demonstrates a lack of efficiency and control of internal processes within the existing supply chain strategy.
+                Management commitment will be required to create, prioritize and implement action plans in a timely manner to avoid serious or prolonged issues with the customer.
+          small: *basic_profile_definitions
+          tiny: *basic_profile_definitions
+
+      scoring:
+        compliant: Compliant criteria
+        incompliant: Non-compliant criteria
+        na_approved: Non Applicable (N/A) criteria approved by the customer therefore the associated points are included in the MMOG/LE score or classification
+        na_not_approved: Non Applicable (N/A) criteria NOT approved by the customer and therefore not included in the MMOG/LE score or classification
+        title: Scoring
+      title: Definitions - Scoring, Weights and Classifications
+      weighting:
+        F1:
+          definition: "= 1 pt"
+          explanation: |
+            A Supply Chain Management (SCM) process that demonstrates an additional level of control of operational processes, contributing to the organization's overall competitiveness.
+            Complying with F1 criteria contributes to the organization’s long-term sustainability and/or competitiveness.
+        F2:
+          definition: "= 2 pts"
+          explanation: |
+            A Supply Chain Management (SCM) process that demonstrates control of operational processes and has significant importance to the efficiency and effectiveness
+            of the organization's operations. If an F2 criterion is not met, the organization’s performance and/or customer satisfaction may be seriously affected.
+        F3:
+          definition: "= 3 pts"
+          explanation: |
+            A key Supply Chain Management (SCM) process that is a fundamental requirement of the organization's operations.
+            If an F3 criterion is not met, there is a high risk of interruption and/or incurring increased costs to the organization's and/or customer's operations.
+        title: Weighting
+
+    scoring_table_totals:
+      actual_score: Actual Score
+      max_score: MAX Score
+      percentual_score: "% Compliance"
+      rating: Rating
+      status: Status
+      title: Totals
+
+    search_form: &assessments_search_form
+      <<: *search_form
+      placeholder: Name, Catalogue, Profile, Site or Partner
+      placeholder_view: Select view
+      placeholder_catalog: Catalogue
+      placeholder_created_from: Date created from
+      placeholder_created_until: Date created up to
+      placeholder_criterion: Criterion
+      placeholder_partner: Partner
+      placeholder_customer: Customer
+      placeholder_shipping_site: Shipping site code
+      placeholder_manufacturing_site: Manufacturing site code
+      placeholder_profile: Profile
+      placeholder_select_status: Status
+      placeholder_select_sent: Sent?
+      use_semicolon: Use ; for multiple search
+      was_sent:
+        'true': 'Yes'
+        'false': 'No'
+      placeholder_site: Site
+      placeholder_title: Assessment name
+      placeholder_score_until: Score up to
+      placeholder_score_from: Score from
+      placeholder_target_from: Target date from
+      placeholder_target_to: Target date up to
+      placeholder_rating: Rating A/B/C
+      placeholder_sent_from: Date sent from
+      placeholder_sent_until:  Date sent up to
+      placeholder_received_from: Date received from
+      placeholder_received_until: Date received up to
+    export_search_form:
+      <<: *assessments_search_form
+      placeholder_filter: Select
+      filter_title: Pre-saved filter
+      search_title: Search parameters
+      export_title: Data selection for csv export
+      placeholder_catalog_version: MMOG/LE v%{version}
+      placeholder_profile_title: "%{title} profile"
+      csv:
+        none: Assessment header
+        chapter: Include chapter details
+        subchapter: Include supchapter details
+        criteria: Include criteria details
+      export: CSV export
+    submenu_subpage:
+      go_to_assessment: Back to assessment
+    submenuitems_admin: &assessment_submenuitems_admin
+      assessment_configuration: Assessment configuration
+      assessment_history: Assessment history
+      assessment_info: Assessment info
+    submenuitems_scoring:
+      scoring_summary: Scoring summary
+      radar_charts: Radar charts
+      progression_chart: Progression chart
+    submenuitems_workflow: &assessment_submenuitems_workflow
+      archive_assessment: Archive assessment
+      unarchive_assessment: Restore assessment
+      download_assessment: Download assessment results as XML file
+      download_review: Download review as XML file
+      send_assessment: Send assessment results
+      send_review: Send review
+      finish_assessment: Finish assessment
+      finish_review: Finish review
+      start_assessment: Start assessment
+      start_review: Start review
+      reset_filters: Reset filters
+      print: Print assessment
+    helpmenu:
+      workflow_help: Assessment workflow help
+    workflow_toolbar:
+      <<: *assessment_submenuitems_workflow
+      <<: *assessment_submenuitems_admin
+    sidebar:
+      title:
+        toolbox: Toolbox
+        infobox:
+          supplier_html: Assessment for %{partner} from %{site}
+          customer_html: Assessment from %{partner} for %{site}
+          supplier_link_text1: Assessment for
+          supplier_link_text2: from
+          customer_link_text1: Assessment from
+          customer_link_text2: for
+      filter:
+        basic_filters: Basic Filters
+        advanced_filters: Advanced Filters
+
+        na_approved_html: '%{icon} N/A approved'
+        na_unapproved_html: '%{icon} N/A unapproved'
+
+        with_customer_feedback_html: With customer feedback %{icon}
+        without_customer_feedback_html: Missing customer feedback %{icon}
+
+        flat_mode_html: Show criteria only %{icon}
+        intro_mode_html: Show requirements only %{icon}
+        outline_mode_html: Show table of contents %{icon}
+
+        na_approved_only_html: Show only N/A approved %{icon}
+        na_unapproved_only_html: Show only N/A unapproved %{icon}
+        missing_or_past_tue_target_date_html: Missing or overdue target date %{icon}
+        missing_completion_date_html: Missing completion date %{icon}
+        missing_action_plan_html: Missing an action plan %{icon}
+        with_action_plan_html: With an action plan %{icon}
+        incomplete_only_html: Show only incomplete criteria %{icon}
+        rejected_only_html: Show only rejected criteria %{icon}
+
+        browsing_mode_html: Show current state for criteria %{icon}
+        show_all_answer_fields_html: Show all answer fields %{icon}
+        colorize_by_compliance_html: Colourise by compliance %{icon}
+      hint:
+        fully_compliant: Compliant
+        not_compliant: Not compliant
+        not_applicable: Not applicable
+        not_applicable_approved: Not applicable / approved
+        not_applicable_unapproved: Not applicable / NOT approved
+        unanswered: Unanswered
+      diff: 
+        compare: Compare
+        reset: Reset
+        source: Source
+        target: Target
+        visibility: "Show:"
+        all: All
+        diff_only: Differences
+        search_title_manufacturing: Title or Manufacturing site
+        search_result_overflow: There are more than 10 matching assessments. Please narrow your search. 
+        compare_with: "Compare %{title} with:"
+        hint: Search for target assessment and select the assessment that you want to compare with the source assessment.
+        attributes:
+          'true': 'Yes'
+          'false': 'No'
+
+    progress_widget:
+      inconspicuous: No issues
+      workflow_progression: Workflow progression
+      issue:
+        one: Issue
+        other: Issues
+      rejection:
+        one: Rejection
+        other: Rejections
+      revision: Revision %{revision}
+      metric:
+        fully_addressed: "Fully addressed criteria: %{count} / %{max}"
+        non_scoring: "Non-scoring answers: %{count} / %{max}"
+        rejected: "Rejected answers: %{count} / %{max}"
+        point_score: "Total score: %{count} / %{max}"
+        
+    
+  user_mailer:
+    welcome:
+      subject: Welcome to MMOG.np
+    email_changed: 
+      subject: Your email address has been updated
+
+  answers:
+    ribbon:
+      accepted: Accepted
+      rejected: Rejected
+      no_approval_date: 'Approval?'
+    form:
+      help:
+        survey: 9_mmog_provide_answers_en.html
+        review: 9_mmog_provide_answers_en.html
+
+  breadcrumbs:
+    assessments: Assessments
+    basic: Basic
+    catalogs: Catalogues
+    charts: Charts (%{profile})
+    companies: Companies
+    full: Full
+    history: History
+    home: Home
+    licenses: Licences
+    login: Login
+    new: New
+    progression: Progression (%{profile})
+    scoring: Scoring (%{profile})
+    sites: Sites
+    users: Users
+    export: Export
+  catalogs:
+    index:
+      import_catalog: Import catalogue
+      import_profile: Import profile
+      import_own_profile: Import own profile
+      placeholder: Version or issued date
+      title: Catalogues
+    catalog:
+      delete: Delete
+  companies:
+    new:
+      title:
+        none: New company (partner or own company)
+        supplier: New supplier
+        customer: New customer
+    edit:
+      title: Edit company
+    show:
+      active:
+        'true': 'Yes'
+        'false': 'No'
+    index:
+      new:
+        none: New company
+        supplier: New supplier
+        customer: New customer
+      title:
+        none: Companies
+        supplier: My Supplier Companies
+        customer: My Customer Companies
+      csv_export: CSV Export
+    search_form:
+      <<: *search_form
+      placeholder_assessment_mailbox: Mailbox address
+      placeholder_manufacturing_site: Manufacturing site
+      placeholder_title: Title
+      placeholder_address: Address
+      placeholder_workflow_policy: Select workflow policy...
+      placeholder_select_active: Show active & inactive companies
+      active:
+        'true': Active companies
+        'false': Inactive companies
+      placeholder: Name or address or email or manufacturing site
+    warnings:
+      own_mailbox_override_prevented: "Own company's mailbox address override prevented."
+    form:
+      contact: Contact
+      mailbox: MMOG.np internal mailbox service for assessments
+  enumerize:
+    answer:
+      compliance:
+        NA: N/A
+        'no': 'No'
+        'yes': 'Yes'
+      undefined: Undefined
+    company:
+      role:
+        customer: Customer
+        own: Own organization
+        supplier: Supplier
+    default: Default
+    user:
+      role:
+        assessor: Assessor
+        c_admin: Company admin
+        s_admin: Site admin
+    workflow_policy:
+      strict: Standard
+      casual: Collaborative
+  error_raised: An unexpected error occurred!
+  error_raised_details: 'Please note the following error id for further investigations: %{uuid}'
+  errors:
+    no_profile_scoring_model: Profile %{name} is not associated with a scoring/rating model!
+    no_partner_mail: The internal mailbox address for your partner (%{title}) is missing. You can set up the internal mailbox address in your partner details
+    wrong_partner_mail: You have set up the wrong mailbox address %{email} for your partner. You can update the internal mailbox address in your partner details.
+    mail_server_busy: Sorry, the mail service is currently out of order. Please try to resend the Assessment later.
+    stored_mail_differs: 'The stored e-mail of this partner (%{stored_sender}) is not matching this sender (%{sender}). Please update your partners e-mail'
+    assessment_possibly_imported: The assessment may have already been imported. Please verify your imported assessments.
+    unknown_profile_name: 'Invalid profile: %{name}!'
+    no_valid_signature: The licence activation key is not recognised. Please check and try again or contact info@odette.org
+    license_used_by_other_account: This licence activation key has been previously uploaded to another account. Please check your order confirmation or contact info@odette.org
+    license_used_by_own_account: You have already uploaded this licence activation key (LAK) for your account
+    license_wrong_format: The licence activation key is not correctly formatted. Please check and try again or contact info@odette.org
+    installation_id_doesnt_match: The licence key file you are trying to import doesn't match with the installation ID of this account
+    hardware_has_changed: Hardware has changed! The licence has been removed
+    could_not_apply_license: Could not apply licence key
+    license_mailbox_already_taken: The licence cannot be imported. Please contact the system administrator
+    mailbox_connection_failed: Connection to the mail server failed. Please try again later!
+    invalid_payment_confirmation_code: The Payment Confirmation Code you have entered is not recognised
+    invalid_one_time_password: The entered one time password was not valid
+    not_profile: The selected file is not a profile
+    not_catalogue: The selected file is not a catalogue
+    license_not_parsable: The selected file is not a licence key file
+    xml_invalid_input: The XML file contains invalid inputs
+    havent_created_yet: You have not yet created %{title}
+    havent_imported_yet: You have not yet imported %{title}
+    missing_dependency: Take this action before creating an assessment
+    active_partner_not_found: Active partner with reference %{manufacturing_site} not found
+    assessment_not_found: Assessment not found
+    assessment_in_progress: Your partner is currently working on this assessment. Please wait until your partner is finished.
+    downgrade_not_allowed: Can not downgrade catalogue for the site %{title}.
+  help:
+    assessment:
+      show:
+        aside:
+          toolbar: Use the toolbar below to control the assessment workflow!
+        main: |
+          *Actual help text will be supplied by Odette.*{:.boo style="color:firebrick"}
+
+          Line 588 - Help / assessment / Main
+      view: |
+        *Actual help text will be supplied by Odette.*{:.boo style="color:firebrick"}
+
+        Line 592 - Help / assessment / view
+    dummy: |
+      *Actual help text will be supplied by Odette.*{:.boo style="color:firebrick"}
+
+      Line 596 - Help / assessment / dummy
+  helpers:
+    search_box_reset_button:
+      hint: Reset search and sorting
+    page_entries_info:
+      more_pages:
+        display_entries: Displaying entries <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total
+      one_page:
+        display_entries:
+          one: Displaying <b>1</b> entry
+          other: Displaying <b>all %{count}</b> entries
+          zero: No entries found
+    submit:
+      answer:
+        create: Save
+        update: Save
+        reset: Reset answers
+      login_reminder:
+        create: Forgot login
+      csv_import:
+        create: Import data
+  home:
+    index:
+      recent_companies:
+        zero: No partners added
+        one: Recently added partner
+        other: Recently added partners
+      recent_sites:
+        zero: No sites added
+        one: Recently added site
+        other: Recently added sites
+      recent_catalogs:
+        zero: No catalogues available
+        one: Recently added catalogue
+        other: Recently added catalogues
+      recent_assessments:
+        zero: No assessment available
+        one: Recently added assessment
+        other: Recently added assessments
+      create_account: Create an account
+      no_account_html: There is no account present. To use this application you have to %{link} first.
+      old_license_warning: You're using an old licence. Please update your licence in order to use the the whole functionality
+      ie_warning: You are using the Internet Explorer browser which is no longer supported, please switch to another browser.
+      non_members:
+        page_title: Welcome to MMOG.np
+        page_text: |
+          MMOG.np is the web platform for the management of  MMOG/LE Assessments.
+          To set up an account on the platform you will need to obtain a licence from Odette. To order a licence please click on the “Licence not yet ordered” link.
+          If an account has already been set-up for your company, you can access the application using the Login and Password assigned to you by your Company Administrator.
+      members:
+        page_title: Welcome to your MMOG.np ecosystem
+        page_text: |
+          If you are a new user, please use the help menu and follow the tutorials to get an introduction to the application.
+      button:
+        login: Login
+        register: Register
+      link:
+        buy_license_html: Licence not yet ordered? Please %{link}
+        click_here: click here
+      unauthorized:
+        You are not allowed to access this page. Talk to your Company Administrator if you think you should have access.
+        (If you were able to access the page before, your session might have expired. Please log in again.)
+    login_form:
+      already_registered_account: Company Account Already Registered
+      wrong_password_or_username: Login or Password is not valid
+      log_in: Log in
+      register_link: New account
+      register_text: |
+        Please enter the "Payment Confirmation Code" from the licence order confirmation email received from Odette
+      register_title: Company Account Not Yet Registered
+      forgot_login: Forgot login
+      payment_confirmation_code: Payment Confirmation Code
+  licenses:
+    index:
+      activate_license: Activate licence
+      activate_new_license: Activate new licence
+      installation_id: Your installation ID
+      license_information: Licence information
+      licence_activation_key: Licence Activation Key
+      title: Licence
+      unlicensed: Please activate your licence to unlock your account!
+      licence_activated: Your new licence has been installed, please continue to set-up your account or update your site records
+      apply: Apply
+      lak: Applied licence activation keys
+      no_lak: No licence activation key applied
+  pages:
+    back: Back
+    configure: Configure
+    confirm: Are you sure?
+    delete: Delete
+    approval: Toggle approval
+    edit: Edit
+    save: Save
+    search: Search
+    show: Show
+    ok: Confirm
+    cancel: Cancel
+    close: Close
+    cannot_undone: This action cannot be undone!
+    delete_body: Delete %{title}
+    approval_body: Toggle approval of %{title}
+    mfa_body_on: Are you sure to activate the 2FA for account %{title}?
+    mfa_body_off: Are you sure to deactivate the 2FA for account %{title}?
+  phrase:
+    compliance:
+      na: N/A
+      na_approved: N/A Approved
+      na_not_approved: N/A Not Approved
+      'no': Not Compliant
+      'yes': Compliant
+    edited: Edited
+    help: Help
+    info: Info
+    open: Open
+    property: Property
+    review: Review
+    save: Save
+    scroll_to_this_item: Scroll to this item
+    table_of_content:
+      info: Click on the link to the right of a chapter title to scroll to that chapter
+    survey: Survey
+    value: Value
+  simple_form:
+    error_notification:
+      default_message: 'Please review the problems below:'
+      assessment: 'Please review the problems on the form'
+    required:
+      mark: "*"
+      text: required
+    'no': 'No'
+    'yes': 'Yes'
+  sites:
+    edit:
+      title: Edit site
+      errors:
+        limit_exceeded: 'No Version %{cat_version} licences are currently available to allocate to this site.'
+    index:
+      new: New site
+      placeholder: Name or address
+      title: Sites
+      csv_export: CSV Export
+    new:
+      title: New site
+    form:
+      new_customer: Add new customer
+      unlicensed_site: Unlicensed site
+  import:
+    catalog:
+      success: Catalogue successfully imported
+      error: Catalogue could not be imported
+    profile:
+      not_found: Profile not found
+  uploads:
+    assessment_result:
+      error: Assessment could not be imported
+      error_no_site: Please select a site to assign the upload to
+      success: Assessment successfully imported
+      title: Import assessment result from supplier
+      upload: Upload
+      xml_file: XML file
+    catalog:
+      error: Catalogue could not be imported
+      success: Catalogue successfully imported
+      title: Import catalogue
+      upload: Upload
+      import: Import
+      xml_file: XML file
+      catalogs: Catalogues
+    customer_response:
+      error: Customer response could not be imported
+      error_no_site: Please select a site to assign the upload to
+      success: Customer response successfully imported
+      title: Import assessment response from customer
+      upload: Upload
+      xml_file: XML file
+    historical_assessment:
+      error: Assessment could not be imported
+      error_no_site: Please select a site to assign the upload to
+      success: Assessment successfully imported
+      title: Import historical assessment
+      upload: Upload
+      xml_file: XML file
+    error_no_file: Please select a valid file to upload
+    error_not_xml: The selected file is not an XML file
+    file_too_large: Please ensure that you have selected an XML file!
+    license:
+      mail_validation_error: Mail is already used for another company
+      error: Licence key could not be imported
+      license_file: Licence key file
+      success: Licence key successfully imported
+      title: Import licence key
+      upload: Upload
+    profile:
+      error: Profile could not be imported
+      success: Profile successfully imported
+      title: Import profile
+      upload: Import
+      xml_file: XML file
+  user_sessions:
+    new:
+      title: Login
+      unauthorized:
+        You are not allowed to access this page. Talk to your Company Administrator if you think you should have access.
+        (If you were able to access the page before, your session might have expired. Please log in again.)
+    confirm:
+      title: Please Enter Your One Time Password
+      submit: Log in
+      cancel: Cancel
+      validation_code: One Time Password
+  users:
+    edit:
+      title: Edit user
+      linked_assessments: Linked assessments
+    index:
+      new: New user
+      placeholder: User ID, name, e-mail, or site
+      placeholder_select_role: Select role...
+      placeholder_select_active: Select active status
+      active:
+        'true': 'Yes'
+        'false': 'No'
+      title: Users
+      csv_export: CSV Export
+      mfa:
+        'true': Deactivate 2FA
+        'false': Activate 2FA
+        confirm:
+          'true':  'The two factor authentication is applied by sending a one-time password to the users email which has to be entered
+          during the log-in process. By deactivating this setting your account will be less secure!
+          Please be aware that this is a global setting affecting all users of your account.'
+          'false': 'The two factor authentication is applied by sending a one-time password to the users email which has to be entered
+          during the log-in process. By activating this setting your account will be more secure!
+          Please be aware that this is a global setting affecting all users of your account.'
+        success_confirm: 2FA was successfully enabled. Please login again now.
+    new:
+      title: New user
+    revise:
+      title: Revise
+      submit: Submit
+    destroy:
+      deleted_user: deleted user
+  action_plans:
+    index:
+      csv_export: CSV Export
+      hint_view:
+        none: To display Action Plans, please select the required view and select or enter the appropriate site details. Additional search parameters may also be entered or selected.
+        customer: To display Action Plans, please enter the Manufacturing site code of the supplier. Additional search parameters may also be entered or selected.
+        supplier: To display Action Plans, please select a site. Additional search parameters may also be entered or selected.
+    action_plans_search_form:
+      <<: *assessments_search_form
+      perspective:
+        customer: Assessments for customers
+        supplier: Assessments from suppliers
+    title: Action plans
+    result_not_found: Action plans not found!
+
+  login_reminders:
+    new:
+      title: Forgot login
+      help:
+        title: Forgot login
+        content: |
+          Submit the email address linked to your user account.
+          You will receive an email with the corresponding login name
+          and a link you can use to reset your password if necessary.
+    create:
+      success: "Login reminder email sent to %{email}"
+    edit:
+      title: Password Change
+      invalid_link: Unknown or expired password reset link!
+      help:
+        title: Password Change
+        content: |
+          You can change your password here.
+          Note that your password must be at least 8 characters long.You should use only letters, numbers, spaces, and .-_@+ please.
+    update:
+      success: "Password changed"
+  csv_imports:
+    show:
+      title: 'Bulk import %{type}'
+      partner_companies: partner companies
+      own_sites: own sites
+      both: own site or partner companies
+      success: '%{count} %{type} successfully imported'
+      redundancy:
+        one: 'One duplicate found.'
+        other: '%{count} duplicates found.'
+
+  locales:
+    all:
+      select_data_language: "Select a Data Language"
+
+  views:
+    menu:
+      log_in: Log in
+      log_out: "Log out (%{account}: %{username})"
+      home: Home
+      resources: Resources
+      catalogs: Catalogues
+      assessments: Assessments
+      users: Users
+      companies: Companies
+      sites: Sites
+      license: Licence
+      help: Help
+      about_mmog: About MMOG/LE
+      about_odette: About Odette
+      language: Language
+      more_languages: More Languages...
+      use_browser_lang: Use Browser Language
+      perspective: View
+    pagination:
+      first: First
+      last: Last
+      next: Next
+      previous: Previous
+    perspective:
+      menu:
+        none: Both views
+        customer: I am customer
+        supplier: I am supplier
+      customer: My customer
+      supplier: My supplier
+
+  application:
+    main_menu:
+      view: Edit
+      title_company: My company
+      title_partner: Partners
+      title_assessment: Assessments
+      analytics: Analytics
+      export: Export
+      customers: Customers
+      manage_companies: Suppliers/Customers
+      catalogs_and_profiles: Catalogues and profiles
+      manage_assessments: All assessments
+      exchange_mailbox: Mailbox
+    please_wait : Please wait ...
+
+  # Translations needed in JS - will be automatically pushed to gon.t.
+  gon:
+    dirty_exit_warning: 'Beware that unsaved changes will be lost if you leave the page now!'
+    dirty_download_warning: 'Beware that unsaved changes will not be included in the download!'
+    dirty_exchange_warning: 'Beware that unsaved changes will not be included in the mail!'
+    dirty_default_warning: 'Beware that unsaved changes will be lost!'
+    archive_warning: 'The assessment can no longer be edited once it has been archived. Do you still want to archive the assessment?'
+
+  recaptcha:
+    errors:
+      verification_failed: 'Captcha verification failed'
+
+  authlogic:
+    error_messages:
+      login_blank: can not be blank
+      login_not_found: is not valid
+      login_invalid: should use only letters, numbers, spaces, and .-_@+ please.
+      consecutive_failed_logins_limit_exceeded: Consecutive failed logins limit exceeded, account is disabled.
+      email_invalid: should be a valid email address.
+      email_invalid_international: should be a valid email address.
+      password_blank: can not be blank
+      password_invalid: is not valid
+      not_active: Your account is not active
+      not_confirmed: Your account is not confirmed
+      not_approved: Your account is not approved
+      no_authentication_details: To sign in, use the login name and password you have received from your Company Administrator.
+      general_credentials_error: Login/Password combination is not valid
+
+  # CanCanCan authorization error messages
+  unauthorized:
+    create:
+      company: You cannot add new companies with your current licence and/or permissions
+      site: You cannot add new sites with your current licence and/or permissions
+    update:
+      company: You cannot modify companies with your current licence and/or permissions
+      site: You cannot modify sites with your current licence and/or permissions
+

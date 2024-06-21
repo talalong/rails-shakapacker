@@ -1,0 +1,117 @@
+// Based on https://codepen.io/eode9/pen/twkKm
+
+.corner-ribbon-container
+	overflow: clip
+
+	.corner-ribbon
+		// colors
+		$white: #f0f0f0
+		$black: #333
+		$grey: #999
+		$blue: #39d
+		$green: #2c7
+		$turquoise: #1b9
+		$purple: #95b
+		$red: #e43
+		$orange: #e82
+		$yellow: #ec0
+
+		// dimensions
+		$w: 200px
+		$h:  35px
+		$dx: 75px
+		$dy: 10px
+
+		position: absolute
+		width: $w
+		color: $white
+		background: $blue
+		opacity: 0.75
+		top: $dy
+		left: -50px
+		text-align: center
+		line-height: $h
+		//letter-spacing: 1px
+		font-weight: bold
+		font-size: 70%
+		text-transform: uppercase
+		transform: rotate(-45deg)
+
+		// &.sticky
+		// 	position: fixed
+
+		&.with-shadow
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
+
+		&.top-left
+			top: $dy
+			left: -$dx
+			transform: rotate(-45deg)
+
+		&.top-right
+			top: $dy
+			right: -$dx
+			left: auto
+			transform: rotate(45deg)
+
+		&.bottom-left
+			top: auto
+			bottom: $dy
+			left: -$dx
+			transform: rotate(45deg)
+
+		&.bottom-right
+			top: auto
+			right: -$dx
+			bottom: $dy
+			left: auto
+			transform: rotate(-45deg)
+
+		&.white
+			background: $white
+			color: #555
+
+		&.black
+			background: $black
+
+		&.grey
+			background: $grey
+
+		&.blue
+			background: $blue
+
+		&.green
+			background: $green
+
+		&.turquoise
+			background: $turquoise
+
+		&.purple
+			background: $purple
+
+		&.red
+			background: $red
+
+		&.orange
+			background: $orange
+
+		&.yellow
+			background: $yellow
+
+		&.default
+			@extend .bottom-right
+			@extend .with-shadow
+
+		&.success
+			@extend .default
+			@extend .green
+
+		&.alert
+			@extend .default
+			@extend .red
+
+		&.global-left
+			@extend .top-left
+			top: 25px
+			left: -60px
+			opacity: 1.0

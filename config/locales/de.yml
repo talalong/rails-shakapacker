@@ -1,0 +1,1247 @@
+---
+de:
+  search_form: &search_form
+    advanced_search: Erweiterte Suche
+    simple_search: Einfache Suche
+  accounts:
+    account:
+      revise: Überarbeite ältesten C-Admin
+    index:
+      license_since: Lizenz seit
+      delete_unused_accounts: Ungenutzte Mandanten Löschen
+      csv_export: CSV Export
+      sites: Werke
+    destroy:
+      account_deleted: Mandant gelöscht
+      unused_accounts_deleted:
+        one: '%{count} ungenutzten Mandanten gelöscht'
+        other: '%{count} ungenutzte Mandanten gelöscht'
+    new:
+      title: Neuer Mandant mit Administrator
+    search_form:
+      <<: *search_form
+      placeholder_view: Ansicht auswählen ...
+      placeholder_companies_title: Firmenname
+      placeholder_installation_id: Installations-ID
+      placeholder_cadmin_email: C-Admin Email
+      placeholder_title: Accountname
+      placeholder_created_from: Angelegt ab
+      placeholder_created_until: Angelegt bis
+      placeholder_licensed_from: Lizenz angelegt ab
+      placeholder_licensed_until: Lizenz angelegt bis
+    show:
+      delete: Dieses Konto löschen
+      revise_old_cadmin: Email vom ältesten C-Admin ändern
+      mfa_active: 2FA aktiv
+      company_users: Unternehmen Admin Benutzer
+      basic_info: Basisinformationen
+      lak: Angewendeter Lizenzkey
+      no_lak: Keinen Lizenzkey angewendet
+      block_account:
+        'true': 'Dieses Konto blockieren'
+        'false': 'Dieses Konto deblockieren'
+      mfa:
+        'true': 'Ja'
+        'false': 'Nein'
+      add_comment: Kommentare hinzufügen
+      edit_comment: Kommentare bearbeiten
+      comment_title: Kommentar
+  activerecord:
+    attributes:
+      account:
+        created_at: Angelegt am
+        time_zone: Zeitzone
+        title: Bezeichnung
+        unused: Ungenutzt (kann gelöscht werden)
+      address:
+        city: Stadt
+        country: Land
+        line_1: Zeile 1
+        line_2: Zeile 2
+        state: Region
+        zip_code: Postleitzahl
+      answer:
+        action_plan: Aktionsplan
+        alternative_assessor: Alternativer Assessor
+        approval_date: Abnahmedatum
+        approved: Bestätigt
+        business_function: Geschäftsfunktion
+        completion_date: Fertigstellungsdatum
+        compliance: Erfüllt
+        cost: Kosten
+        cost_currency: Währung
+        current_state: Aktueller Stand
+        customer_contact: Kundenkontakt
+        customer_response: Kundenantwort
+        gap: Abweichung
+        responsibility: Verantwortlichkeit
+        show_assessor_verifier: Alt. Assessor / Prüfer
+        target_date: Zieldatum
+        verifier: Alternativer Prüfer
+        updated_at: Zuletzt aktualisiert am
+        dialog:
+          title: Ihre Änderungen sind nicht gesichert
+          subtitle: 'Achtung: Nicht gespeicherte Änderungen werden verloren gehen!'
+          save: Speichern und schließen
+          dont_save: Schließen ohne speichern
+      assessment:
+        assessment_date: Assessmentdatum
+        assessor: Assessor
+        assessor_email: Assessor E-Mail
+        assessor_telephone: Assessor Telefon
+        author: Autor
+        catalog: Katalog
+        first_created_at: Erzeugt am
+        created_at: Erzeugt am
+        due_date: Fälligkeitsdatum
+        last_submitted_date: Letzte Übertragung
+        manufacturing_site: Produktionsstätte
+        profile: Profil
+        revision: Revision
+        shipping_site: Versandstelle
+        site: { one: Werk, other: Werke }
+        sent_at: Zuletzt versendet am
+        status: Status
+        status/archived: Archiviert
+        status/completed: Abgeschlossen
+        status/in_progress: In Progress
+        status/in_review: In Review
+        status/new: Neu
+        status/reviewed: Bewertet
+        title: Bezeichnung
+        update_frequency: Updatefrequenz
+        updated_at: Zuletzt aktualisiert am
+        verification_date: Prüfungsdatum
+        verifying_assessor: Prüfender Assessor
+        verifying_assessor_email: Prüfender Assessor E-Mail
+        verifying_assessor_telephone: Prüfender Assessor Telefon
+        import_feedback: Feedback übernehmen
+        score: Score
+        rating: Bewertung
+        catalog_profile: Katalog/Profil
+        include_answers_format: Feedback übernehmen von
+        include_answers_xml: Einer XML Datei
+        include_answers_assessment: Einem vorhandenen Assessment
+      catalog:
+        issuing_date: Ausgabedatum
+        languages: Sprachen
+        version: Version
+      company:
+        contact_name: Kontakt
+        email: Kontakt E-Mail
+        role: Rolle
+        telephone: Kontakt Telefonnummer
+        title: Name
+        partner: { one: Partner, other: Partner }
+        workflow_policy: MMOG.np Workflow-Richtline
+        assessment_mailbox: MMOG.np Mailbox Adresse
+        placeholder_assessment_mailbox: odette-1234@mail2.mmogle.com
+        active: Aktiv
+        inactive: Inaktiv
+        created_at: Angelegt am
+      license:
+        catalog_name: Katalogname
+        catalog_version: Katalogversion
+        sites: Anzahl Werke
+        mail: E-Mail-Adresse
+        license_key: Installations-ID
+        availability_5: Version 5.0 (benutzt/gesamt)
+        availability_6: Version 6.0 (benutzt/gesamt)
+      partner_reference:
+        customer: Kunde
+        manufacturing_site: Produktionsstätte
+      site:
+        title: Bezeichnung
+      user:
+        email: E-Mail
+        email_confirmation: E-Mail bestätigen
+        first_name: Vorname
+        full_name: Name
+        last_name: Nachname
+        login: Login
+        password: Passwort
+        password_confirmation: Passwort bestätigen
+        role: Rolle
+        site: Werk
+        telephone: Telefon
+      user_session:
+        login: Login
+        password: Passwort
+
+    errors:
+      messages:
+        accepted: Muss akzeptiert werden!
+        blank: Muss ausgefüllt werden!
+        confirmation: Stimmt nicht mit %{attribute} überein!
+        empty: Muss ausgefüllt werden!
+        equal_to: Muss genau %{count} sein!
+        even: Muss gerade sein!
+        exclusion: ist nicht verfügbar!
+        greater_than: muss größer als %{count} sein!
+        greater_than_or_equal_to: Muss größer oder gleich %{count} sein!
+        inclusion: Ist kein gültiger Wert!
+        invalid: Ist nicht gültig!
+        less_than: Muss kleiner als %{count} sein!
+        less_than_or_equal_to: muss kleiner oder gleich %{count} sein!
+        model_invalid: 'Gültigkeitsprüfung ist fehlgeschlagen: %{errors}!'
+        not_a_number: ist keine Zahl!
+        not_an_integer: muss ganzzahlig sein!
+        odd: muss ungerade sein!
+        other_than: Darf nicht gleich %{count} sein!
+        present: Darf nicht ausgefüllt werden!
+        required: Muss ausgefüllt werden!
+        taken: Ist bereits vergeben!
+        too_long:
+          one: Ist zu lang (mehr als 1 Zeichen)!
+          other: Ist zu lang (mehr als %{count} Zeichen)!
+        too_short:
+          one: Ist zu kurz (weniger als 1 Zeichen)!
+          other: ist zu kurz (weniger als %{count} Zeichen)!
+        wrong_length:
+          one: Hat die falsche Länge (muss genau 1 Zeichen haben)!
+          other: Hat die falsche Länge (muss genau %{count} Zeichen haben)!
+      models:
+        assessment:
+          attributes:
+            revision: Muss größer oder gleich 0 sein!
+            status:
+              inclusion: muss Bewertet oder Abgeschlossen sein, um das Assessment zu verschicken
+            site:
+              site_changed: Ändern des Werkes ist nicht erlaubt
+            partner:
+              partner_changed: Ändern des Partners ist nicht erlaubt
+        answer:
+          attributes:
+            approval_date:
+              blank: Muss leer sein wenn kein Kindenkontakt angegeben ist!
+            customer_contact:
+              blank: Muss angegeben werden wenn auch das Abnahmedatum gegeben ist  !
+          record_not_unique: Diese Antwort wurde schon hinzugefügt. Bitte laden Sie das Assessment erneut
+        company:
+          inactive: Der Absender ist inaktiv.
+          attributes:
+            role:
+              inclusion: Ungültige Partner-Rolle!
+            assessment_mailbox:
+              invalid: Ungültiges Email-Format
+              taken_by: Die E-Mail wird bereits von %{name} verwendet.
+
+    models:
+      account:
+        one: Mandant
+        other: Mandanten
+      address: Adresse
+      answer: Antwort
+      assessment:  { one: Assessment, other: Assessments }
+      catalog: Katalog
+      chapter: Kapitel
+      company: { one: Firma, other: Firmen }
+      criterion: Kriterium
+      customer: Kunde
+      license: Lizenz
+      partner_references: Lieferantennummern
+      profile: 
+        one: Profil
+        other: Profile
+      related_assessments: Zugehörige Assessments
+      related_profiles: Zugehörige Profile
+      requirement: Anforderung
+      site: { one: Werk, other: Werke }
+      sites: Werke
+      subchapter: Unterkapitel
+      user: Nutzer
+      user_session: Nutzer Session
+      users: Nutzer
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      long: "%d %B %Y"
+      short: "%d %b %y"
+  activemodel:
+    models:
+      login_reminder: Anmeldedaten vergessen ...
+      csv_import: CSV-Import
+    attributes:
+      login_reminder:
+        email: E-Mail
+      csv_import:
+        type: Art der Daten
+        file: CSV-Datei
+        text: CSV-Text
+        separator: Trennzeichen
+    errors:
+      messages:
+        blank: Darf nicht leer sein!
+        inclusion: Ungültiger Wert!
+      models:
+        login_reminder:
+          email: E-Mail ungültig!
+        csv_import:
+          no_data: Keine Daten!
+          bad_data: Fehlerhafte Daten - bitte beachten Sie die unten angezeigten Details.
+          missing_columns: 'Fehlende Spalten: %{names}'
+          unknown_columns: 'Unbekannte Spalten: %{names}'
+          invalid_encoding: "Ungültige Textkodiereung. Erwartet: UTF-8"
+          unexpected_encoding_error: "Unerwarteter Textkodiereungsfehler: %{error}"
+          unexpected_data_error: "Unerwarteter Datenfehler: %{error}"
+
+  addresses:
+    address:
+      title: Adresse
+
+  assessment:
+    workflow:
+      log:
+        archived: archiviert
+        new: Neu
+        none: Noch nichts geschehen
+        completed: Beendet
+        review_completed: Bewertung beendet
+        review_exported: Bewertung exportiert
+        review_imported: Importiert vom Kunden
+        review_started: Bewertung gestartet
+        survey_completed: Beendet
+        survey_exported: Ergebnisse exportiert
+        survey_imported: Importiert vom Zulieferer
+        survey_started: Gestartet
+        sent_to_customer: Zum Kunden gesendet
+        sent_to_supplier: Zum Zulieferer gesendet
+    info_content:
+      mail_received_from_customer: Mail von Kunden erhaten
+      mail_received_from_supplier: Mail von Lieferant erhalten
+  assessments:
+    chart:
+      titles:
+        by_chapter: "%{catalog_name} Radar-Diagramm nach Kapitel"
+        by_subchapter: "%{catalog_name} Radar-Diagramm nach Unterkapitel"
+        subchapters_by_chapter: Unterkapitel-Radar-Diagramme nach Kapitel
+    new:
+      title: Neues Assessment
+      upload_info_message: Um Antworten eines existierenden Assessments hinzuzufügen, wählen Sie bitte ein Assessment aus oder laden Sie bitte eine Datei mit Assessment-Resultaten hoch.
+      not_found: Kein Assessment gefunden
+    edit:
+      title: Assessment bearbeiten
+      upload_info_message: 'Achtung: bestehende Antworten für das gleiche Kriterium werden überschrieben!'
+      answers_deleted: Die Antworten des alten Katalogs wurden gelöscht!
+    form:
+      import_feedback_hint: 'Achtung: initial ist das Feedback im individuellen Modus nicht sichtbar'
+    history:
+      author: Autor
+      criterion: Kriterium
+      change: Veränderung
+      date: Datum
+      role: Rolle
+      title: Vergangenheit
+      type: Level
+      changes:
+        attribute: Attribut
+        before: Vorher
+        after: Nachher
+      event:
+        title: Event
+        import_xml: XML importiert
+        import_mail: "Importiert von %{mail}"
+        export: Exportiert
+        sent: "Gesendet zu %{mail}"
+        status: Status Veränderung
+        configuration: Konfigurations Veränderung
+        update: Aktualisierung
+        create: Erzeugung
+        mail_received: E-Mail erhalten
+        mail_received_at: E-Mail erhalten am
+        destroy: Löschen
+        duplicate: "Koppiert von %{mail}"
+      search:
+        change: Durchsuche den Inhalt
+        created_from: Datum von
+        created_up_to: Datum bis
+        placeholder_type: Wähle ein Level
+        placeholder_event: Wähle einen Event
+      history_not_complete: |
+        Anmerkung: Dieses Assessment wurde vor der Implementierung von Release 2.5 erstellt. Demzufolge sind frühere 
+        Änderungen nicht vollständig in der Tabelle abgebildet.  
+    versions_search_form:
+      event:
+        import_xml: XML Importiert
+        import_mail: Imported von
+        export: Exportiert
+        sent: Status Veränderung
+        status: Status Change
+        configuration: Konfigurations Veränderung
+        update: Aktualisierung
+        create: Erzeugung
+        duplicate: Duplizieren
+      type:
+        assessment: Assessment
+        answer: Antwort
+    index:
+      customer_import: Kundenfeedback importieren
+      new: Neues Assessment
+      select_assessment: Assessment auswählen
+      supplier_import: Lieferantenassessment importieren
+      historical_import: Historisches Assessment importieren
+      csv_export: CSV Export
+      csv_filename: assessments.csv
+      check_uncheck_all: Alle selektieren/deselektieren
+      confirm_delete_multiple: Sind Sie sicher, dass Sie diese Assessments entfernen wollen?
+      confirm_delete_body: Möchten Sie alle %{size} Assessments löschen?
+      delete_selection: Ausgewählte Assessments der aktuellen Seite löschen
+      delete_all: Auf allen Seiten löschen (%{count})
+      duplicate_assessment: Assessment duplizieren
+      missing_license_catalog: Lizenz für das Werk %{name} und den Katalog %{version} nicht vorhanden.
+      title:
+        none: Assessments
+        supplier: Assessments von Lieferanten
+        customer: Assessments für Kunden
+    exchange:
+      successfully_sent: Assessment wurde erfolgreich verschickt
+      error_missing_mail_config: Fehlende Mail-Einstellungen, um Assessment zu senden
+    progression:
+      chart_heading: 'Diagram - %{catalog} %{profile}'
+      table_heading: 'Diagrammdaten - %{catalog} %{profile}'
+      gap_alert: |
+        Achtung: Einige Zieldaten überschreiten den beobachteten Zeitraum um mehr als ein Monat.
+        Sie sind in der letzten Position des Diagramms und der Tabelle zusammengefasst. 
+      no_action_plan_alert:
+        one: "HINWEIS: %{count} NICHT-KONFORMES Kriterium hat keinen Aktionsplan."
+        other: "HINWEIS: %{count} NICHT-KONFORME Kriterien haben keinen Aktionsplan."
+      month_ending: Monatsende
+      assessment_date: A. Dat
+      classification: Klassifizierung
+      compliant: Konform
+      fx_nc_with_target_date: F%{weight} nicht-konform mit Zieldatum
+      missing_or_past_due_target_date: Zieldatum überschritten!
+      na_not_approved: N/A nicht genehmigt
+      total_points: Ges. Punkte
+      total_score: Ges. Score %
+      future_score: Zuk. Score %
+      fx_criteria: F%{weight} Kriterien
+
+    score:
+      chapter_sumary_title: Zusammenfassung Kapitel %{chapter_nr}
+      chapter_table:
+        headings:
+          assessor: Name des Assessors
+          chapter_nr: Ch.
+          requirement_nr: Req.
+          results: Ergebnis (Konforme Kriterien x Gewichtung)
+          score: Score
+          score_max: Max
+          score_percent: "% Comp"
+          verifier: Name des Prüfers
+      chapter_title: Kapitel %{chapter_nr}
+      main_title: Scoring Zusammenfassung - %{profile}
+      
+    export:
+      title: Assessment Export
+      perspective:
+        none: Beide Ansichten
+        customer: Assessments für Kunden
+        supplier: Assessments von Lieferanten
+      queued: Der Export wird vorbereitet und an %{mail} versendet
+      tips: Diese Exportfunktion wurde speziell für Unternehmen entwickelt, die viele verschiedene Standorte und/oder eine große Menge an Gutachten verwalten. Mehrere Filter ermöglichen die Verfeinerung der Daten, bevor sie zur weiteren Analyse und Berichterstellung als CSV-Datei exportiert werden. Für weitere Informationen zu dieser Funktion verwenden Sie bitte das Hilfemenü und folgen Sie den Tutorials.
+
+    scoring_assessment_info:
+      na_info_approved:
+        one: "%{count} Kriterium wurde genehmigt."
+        other: "%{count} Kriterien wurden genehmigt."
+      na_info_not_approved:
+        one: "%{count} Kriterium wurde NICHT genehmigt."
+        other: "%{count} Kriterien wurden NICHT genehmigt."
+      na_info_total:
+        one: '%{count} Kriterium wurde als "Non Applicable" (N/A) geennzeichnet.'
+        other: "%{count} Kriterien wurden als Non Applicable (N/A) geennzeichnet."
+      note:
+        content: |
+          Alle Angaben (Firmenname, Werksadresse, Lieferantennummer (Produktion und/oder Versand), Assessment-Datum, Assessor,
+          E-Mail des Assessores und Telefonnummer) müssen für eine angegeben werden.
+        title: Anmerkung
+      signature: Unterschrift
+
+    scoring_definitions:
+      rating:
+        title: Bewertung
+        descriptions:
+          full:
+            A:
+              definition: |
+                1. Einhaltung aller F3-Kriterien und
+                2. Weniger als 10 F2-Kriterien sind nicht erfüllt und
+                3. Eine Gesamtpunktzahl von 90% oder höher wurde erreicht.
+              explanation: |
+                Die Organisation erfüllt allen wichtigen Kriterien  und kann nachweisen, dass die Prozesse des Supply Chain Management sehr gut umgesetzt wurden.
+                Jährliche Einschätzungen werden mit dem Ziel durchgeführt, nachhaltige und bewährte Prozesse zu gewährleisten.
+                Zur Unterstützung der kontinuierlichen Verbesserung sollte die Entwicklung eines Aktionsplans in Betracht gezogen werden, um die noch nicht erfüllten Kriterien zu verbessern.
+            B:
+              definition: |
+                1. Einhaltung aller F3-Kriterien und
+                2. 10 bis maximal 15 F2-Kriterien sind nicht erfüllt und
+                3. Eine Gesamtpunktzahl von 75% oder mehr aber weniger als 90% wurde erreicht.
+              explanation: |
+                Obwohl die meisten Grundlagen des Supply Chain Managements demonstriert werden, ist die Organisation in mehreren Bereichen mangelhaft.
+                Das beeinträchtigt die Effizienz der internen Leistung und die Fähigkeit, die Anforderungen des Kunden zu erfüllen.
+                Ein Aktionsplan sollte in einem Zeitrahmen entwickelt und umgesetzt werden, der den Bedürfnissen des Unternehmens und seiner Kunden entspricht.
+            C:
+              definition: |
+                1. Nichterfüllung mindestens eines F3-Kriteriums oder
+                2. Nichterfüllung von 16 oder mehr F2-Kriterien oder
+                3. Eine Gesamtpunktzahl von weniger als 75% wurde erreicht.
+              explanation: |
+                Die Organisation ist in einem oder mehreren Schlüsselbereichen des Supply Chain Managements mangelhaft.
+                Diese Situation schafft ein hohes Risiko der Störung der Kunden und zeigt einen Mangel an Effizienz und Kontrolle der internen Prozesse innerhalb der bestehenden Supply Chain Strategie.
+                Das Management-Engagement wird erforderlich sein, um Aktionspläne rechtzeitig zu erstellen, zu priorisieren und umzusetzen, um schwere oder verlängerte Probleme mit dem Kunden zu vermeiden.
+          basic: &basic_profile_definitions
+            A:
+              definition: |
+                1. Einhaltung aller F3-Kriterien und
+                2. Nichteinhaltung von weniger als 10 F2-Kriterien und
+                3. Gesamtpunktzahl von 90% und mehr wird erreicht.
+              explanation: |
+                Die Organisation ist in allen wichtigen Kriterien kompatibel und kann nachweisen, dass die Prozesse der Supply Chain Management in der Anlage am besten sind.
+                Jährliche Einschätzungen werden mit dem Ziel durchgeführt, nachhaltige und bewährte Prozesse zu gewährleisten.
+                Zur Unterstützung der kontinuierlichen Verbesserung sollte die Entwicklung eines Aktionsplans in Betracht gezogen werden, um die noch nicht erfüllten Kriterien zu beseitigen.
+            B:
+              definition: |
+                1. Einhaltung aller F3-Kriterien und
+                2. Nichteinhaltung von 10 bis 15 F2 Kriterien und
+                3. Gesamtpunktzahl von 75% bis kleiner 90% wird erreicht.
+              explanation: |
+                Obwohl die meisten Grundlagen des Supply Chain Managements demonstriert werden, ist die Organisation in mehreren Bereichen mangelhaft
+                Das die Effizienz der internen Leistung beeinträchtigt und seine Fähigkeit, die Bedürfnisse des Kunden zu unterstützen, beeinträchtigen kann.
+                Ein Aktionsplan sollte in einem Zeitrahmen entwickelt und umgesetzt werden, der den Bedürfnissen des Unternehmens und seiner Kunden entspricht.
+            C:
+              definition: |
+                1. Nichteinhaltung eines F3-Kriteriums oder
+                2. Nichteinhaltung von 16 oder mehr F2-Kriterien oder 3) Eine Gesamtpunktzahl von weniger als 75%
+                3. Gesamtpunktzahl ist kleiner als 75%.
+              explanation: |
+                Die Organisation ist in einem oder mehreren Schlüsselbereichen des Supply Chain Managements mangelhaft.
+                Diese Situation bedeutet ein hohes Risiko der Störung der Kundenprozesse und zeigt einen Mangel an Effizienz und Kontrolle der internen Supply Chain Management Prozesse beim Lieferanten.
+                Das Engagement des Management ist erforderlich, um Aktionspläne rechtzeitig zu erstellen, zu priorisieren und umzusetzen, um schwere oder langwierige Probleme mit dem Kunden zu vermeiden.
+          small: *basic_profile_definitions
+          tiny: *basic_profile_definitions
+
+      scoring:
+        compliant: Erfüllte Kriterien
+        incompliant: Nicht erfüllte Kriterien
+        na_approved: Nicht anwendbare (N/A) Kriterien, die vom Kunden akzeptiert wurden, und somit volle Punktzahl erhalten.
+        na_not_approved: Nicht anwendbare (N/A) Kriterien, die vom Kunden *NICHT* akzeptiert wurden, und somit *KEINE* Punkte erhalten
+        title: Auswertung
+      title: Definitionen - Auswertung, Gewichung und Klassifizierung
+      weighting:
+        F1:
+          definition: "= 1 Pkt"
+          explanation: |
+            Ein Supply Chain Management (SCM) -Prozess, der ein zusätzliches Maß an Kontrolle der operativen Prozesse zeigt und zur Wettbewerbsfähigkeit der Organisation beiträgt.
+            Die Einhaltung von F1-Kriterien trägt zur langfristigen Nachhaltigkeit und / oder Wettbewerbsfähigkeit der Organisation bei.
+        F2:
+          definition: "= 2 Pkt"
+          explanation: |
+            Ein Supply Chain Management (SCM) Prozess, der die Kontrolle über operative Prozesse demonstriert und eine wesentliche Bedeutung für die Effizienz und Effektivität
+            des Betriebs der Organisation hat. Wenn ein F2-Kriterium nicht erfüllt ist, kann die Leistung und / oder Kundenzufriedenheit der Organisation ernsthaft beeinträchtigt werden.
+        F3:
+          definition: "= 3 Pkt"
+          explanation: |
+            Ein Schlüsselprozess des Supply Chain Management (SCM), der eine grundlegende Anforderung an die operative Tätigkeit der Organisation ist.
+            Wenn ein F3-Kriterium nicht erfüllt ist, besteht ein hohes Risiko der Unterbrechung und / oder erhöhte Kosten für die Organisation und / oder den Betrieb des Kunden.
+        title: Gewichtung
+
+    scoring_table_totals:
+      actual_score: Punktestand
+      max_score: Max. Punktezahl
+      percentual_score: Punktestand in %
+      rating: Bewertung
+      status: Status
+      title: Gesamt
+
+    search_form: &assessments_search_form
+      <<: *search_form
+      placeholder: Bezeichnung, Katalog, Profil, Werk, Partner
+      placeholder_view: Ansicht auswählen
+      placeholder_catalog: Katalog
+      placeholder_created_from: Datum angelegt ab
+      placeholder_created_until: Datum angelegt bis
+      placeholder_partner: Partner
+      placeholder_customer: Customer
+      placeholder_shipping_site: Versandstellecode
+      placeholder_manufacturing_site: Produktionsstättecode
+      placeholder_profile: Profil
+      placeholder_select_sent: Versendet?
+      placeholder_select_status: Status
+      use_semicolon: Benutze ; für Mehrfachsuche
+      was_sent:
+        'true': Ja
+        'false': Nein
+      placeholder_site: Werk
+      placeholder_title: Assessmentsbezeichnung
+      placeholder_score_until: Score bis
+      placeholder_score_from: Score ab
+      placeholder_target_from: Target date von 
+      placeholder_target_to: Target date bis
+      placeholder_rating: Bewertung A/B/C
+      placeholder_sent_from: Datum versendet ab
+      placeholder_sent_until: Datum versendet bis
+      placeholder_received_from: Datum erhalten ab
+      placeholder_received_until: Datum erhalten bis
+    export_search_form:
+      <<: *assessments_search_form
+      placeholder_filter: Wähle
+      filter_title: Vorgespeicherter Filter
+      search_title: Suchparameter
+      export_title: Datenauswahl für Export
+      placeholder_catalog_version: MMOG/LE v%{version}
+      placeholder_profile_title: "%{title} Profil"
+      csv:
+        none: Assesment Kopfzeile
+        chapter: Inklusive Details der Kapitel
+        subchapter: Inklusive Details der Unterkapitel
+        criteria: Inklusive Details der Kriterien
+      export: CSV Export
+    submenu_subpage:
+      go_to_assessment: Zum Assessment
+    submenuitems_admin: &assessment_submenuitems_admin
+      assessment_configuration: Konfiguration des Assessments
+      assessment_history: Verlauf des Assessments
+      assessment_info: Info zum Assessment
+    submenuitems_scoring:
+      scoring_summary: Bewertung
+      radar_charts: Radar-Diagramme
+      progression_chart: Fortschritts-Diagramm
+    submenuitems_workflow: &assessment_submenuitems_workflow
+      archive_assessment: Assessment archivieren
+      unarchive_assessment: Assessment wiederherstellen
+      download_assessment: Assessmentresultate als XML-Datei herunterladen
+      download_review: Überprüfung als XML-Datei herunterladen
+      send_assessment: Assessmentresultate senden
+      send_review: Überprüfung senden
+      finish_assessment: Assessment abschließen
+      finish_review: Überprüfung abschließen
+      start_assessment: Assessment starten
+      start_review: Überprüfung starten
+      reset_filters: Filter zurücksetzen
+      print: Assessment Drucken
+    helpmenu:
+      workflow_help: Assessment Workflow Hilfe
+    workflow_toolbar:
+      <<: *assessment_submenuitems_workflow
+      <<: *assessment_submenuitems_admin
+    sidebar:
+      title:
+        toolbox: Toolbox
+        infobox:
+          supplier_html: Assessment für %{partner} von %{site}
+          customer_html: Assessment von %{partner} für %{site}
+          supplier_link_text1: Assessment für
+          supplier_link_text2: von
+          customer_link_text1: Assessment von
+          customer_link_text2: für
+      filter:
+        basic_filters: Einfache Filter
+        advanced_filters: Erweiterte Filter
+
+        na_approved_html: '%{icon} NA genehmigt'
+        na_unapproved_html: '%{icon} NA nicht genehmigt'       
+
+        with_customer_feedback_html: Antworten mit Kundenfeedback %{icon}
+        without_customer_feedback_html: Antworten ohne Kundenfeedback %{icon}
+
+        flat_mode_html: Nur Kriterien und Antworten anzeigen %{icon}
+        intro_mode_html: Nur Anforderungen anzeigen %{icon}
+        outline_mode_html: Inhaltsverzeichnis anzeigen %{icon}
+
+        na_approved_only_html: Nur genehmigte N/A %{icon}
+        na_unapproved_only_html: Nur nicht genehmigte N/A %{icon}        
+        missing_or_past_tue_target_date_html: Zieldatum fehlt oder überfällig %{icon}
+        missing_completion_date_html: Kein Fertigstellungsdatum %{icon}
+        missing_action_plan_html: Antworten ohne Aktionsplan %{icon}  
+        with_action_plan_html: Antworten mit Aktionsplan %{icon}  
+        incomplete_only_html: Unvollständige Antworten %{icon}
+        rejected_only_html: Zurückgewiesene Antworten %{icon}
+
+        browsing_mode_html: Nur aktuellen Stand einblenden %{icon}
+        show_all_answer_fields_html: Alle Antwort-Felder anzeigen %{icon}
+        colorize_by_compliance_html: Einfärben nach Erfüllungsgrad %{icon}
+
+      hint:
+        fully_compliant: Erfüllt
+        not_compliant: Nicht erfüllt
+        not_applicable: Nicht anwendbar
+        not_applicable_approved: Nicht anwendbar / genehmigt
+        not_applicable_unapproved: Nicht anwendbar / NICHT genehmigt 
+        unanswered: Noch nicht beantwortet
+      
+      diff:
+        compare: Vergleich
+        reset: Zurücksetzen
+        source: Quelle
+        target: Ziel
+        visibility: "Zeige:"
+        all: Alle
+        diff_only: Unterschiede
+        search_title_manufacturing: Titel oder Produktionsstätte
+        search_result_overflow: Es gibt mehr als 10 gefundene Assessments. Bitte grenzen Sie Ihre Suche ein.
+        compare_with: "Vergleich %{title} mit:"
+        hint: Suchen Sie nach dem Zielassessment und wählen Sie das Assessment aus, das Sie mit dem Quellassessment vergleichen möchten.
+        attributes:
+          'true': 'Ja'
+          'false': 'Nein'
+    
+    progress_widget:
+      inconspicuous: Unauffällig
+      workflow_progression: Workflow-Fortschritt
+      issue:
+        one: Problem
+        other: Probleme
+      rejection:
+        one: Zurückweisung
+        other: Zurückweisungen
+      revision: Revision %{revision}
+      metric:
+        fully_addressed: "Vollständig beantwortet: %{count} / %{max}"
+        non_scoring: "Antworten ohne Punkte: %{count} / %{max}"
+        rejected: "Zurückgewiesene Antworten: %{count} / %{max}"
+        point_score: "Erzielte Punkte: %{count} / %{max}"
+
+  user_mailer:
+    welcome:
+      subject: Willkommen zu MMOG-LE/NP
+    email_changed:
+      subject: Ihre E-Mail-Adresse wurde geändert
+
+  answers:
+    ribbon:
+      accepted: Genehmigt
+      rejected: Abgelehnt
+      no_approval_date: 'Genehmigt?'
+    form:
+      help: 
+        survey: 9_mmog_provide_answers_en.html
+        review: 9_mmog_provide_answers_en.html
+
+  breadcrumbs:
+    assessments: Assessments
+    basic: Einfach
+    catalogs: Kataloge
+    charts: Diagramme (%{profile})
+    companies: Firmen
+    full: Vollständig
+    history: Historie
+    home: Start
+    licenses: Lizenzen
+    login: Login
+    new: Neu
+    progression: Hochrechnung (%{profile})
+    scoring: Auswertung (%{profile})
+    sites: Werke
+    users: Nutzer
+    export: Export
+  catalogs:
+    index:
+      import_catalog: Katalog importieren
+      import_profile: Profil importieren
+      import_own_profile: Eigenes Profil importieren
+      placeholder: Version oder Ausgabedatum
+      title: Kataloge
+    catalog:
+      delete: Löschen
+  companies:
+    new:
+      title: 
+        none: Neue Firma
+        supplier: Neuer Supplier
+        customer: Neuer Customer
+    edit:
+      title: Firma bearbeiten
+    show:
+      active:
+        'true': Ja
+        'false': Nein
+    index:
+      new: 
+        none: Neue Firma (Partner oder eigene Firma)
+        supplier: Neuer Supplier
+        customer: Neuer Customer 
+      title:
+        none: Firmen
+        supplier: Meine Lieferanten Firmen
+        customer: Meine Kunden Firmen
+      csv_export: CSV Export
+      search_form:
+        <<: *search_form
+        placeholder_assessment_mailbox: Assessment Mailbox
+        placeholder_manufacturing_site: Produktionsstätte
+        placeholder_title: Name
+        placeholder_address: Adresse
+        placeholder_workflow_policy: Workflow-Richtline auswählen...
+        placeholder_select_active: Zeige aktive & inaktive Firmen
+        active:
+          'true': Aktive Firmen
+          'false': Inaktive Firmen
+        placeholder: Bezeichnung oder Adresse oder E-Mail oder Produktionsstätte
+    warnings:
+      own_mailbox_override_prevented: "Das Überschreiben der Mailbox-Addresse der eigenen Firma wurde verhindert."
+    form:
+      contact: Kontakt
+      mailbox: MMOG.np interne Mailbox für Assessments
+  enumerize:
+    answer:
+      compliance:
+        NA: N/A
+        'no': Nein
+        'yes': Ja
+      undefined: Undefiniert
+    company:
+      role:
+        customer: Kunde
+        own: Eigene Organisation
+        supplier: Lieferant
+    default: Default
+    user:
+      role:
+        assessor: Assessor
+        c_admin: Company-Admin
+        s_admin: Site-Admin
+    workflow_policy:
+      strict: individueller Modus
+      casual: kollaborativer Modus
+  error_raised: Ein unerwarteter Fehler ist aufgetreten!
+  error_raised_details: 'Bitte notieren Sie sich die folgende Error-ID für weitere Untersuchungen: %{uuid}'
+  errors:
+    no_profile_scoring_model: Das Profil %{name} ist mit keinem Bewertungsmodell verbunden!
+    no_partner_mail: Die interne Mailboxadresse Ihres Partners (%{title}) fehlt. Sie können das interne Mailbox Adresse in Ihren Partnerdetails anlegen
+    wrong_partner_mail: Sie haben für Ihren Partner die falsche Mailbox Adresse %{email} eingerichtet. Sie können die interne Mailbox Adresse in Ihren Partnerdetails aktualisieren.
+    mail_server_busy: Der Mail-Server ist derzeit leider außer Betrieb. Bitte versuchen Sie, das Assessment später erneut zu senden.
+    stored_mail_differs: 'Die gespeicherte Mail-Adresse des Partners (%{stored_sender}) stimmt nicht mit dem Sender überein (%{sender}). Bitte aktualisiere die Mail-Adresse des Partners'
+    assessment_possibly_imported: Das Assessment wurde möglicherweise bereits importiert. Bitte überprüfen Sie Ihre importierten Assessments.
+    unknown_profile_name: 'Ungültiges Profil: %{name}'
+    no_valid_signature: Der Lizenzkey wird nicht erkannt. Bitte prüfen und erneut versuchen oder info@odette.org kontaktieren.
+    license_used_by_other_account: Dieser Lizenzkey wurde bereits von einem anderen Account verwendet. Prüfen Sie bitte nochmals Ihre Bestätigungs-E-Mail oder kontaktieren Sie info@odette.org
+    license_used_by_own_account: Sie haben diesen Lizenzkey bereits in Ihren Account importiert
+    license_wrong_format: Der Lizenzkey ist nicht korrekt formatiert. Bitte überprüfen Sie dies und versuchen Sie es erneut oder wenden Sie sich an info@odette.org
+    installation_id_doesnt_match: Die importierte Lizenzschlüsseldatei stimmt nicht mit der Installations-ID von diesem Konto überein
+    hardware_has_changed: Die Hardware hat sich verändert! Die Lizenz wurde entfernt
+    could_not_apply_license: Der Lizenzkey konnte nicht eingelöst werden
+    license_mailbox_already_taken: Die Lizenz konnte nicht importiert werden. Bitte kontaktieren Sie den Systemadministrator
+    mailbox_connection_failed: Die Verbindung zum Mail-Server ist fehlgeschlagen. Bitte versuchen Sie es später noch einmal!
+    invalid_payment_confirmation_code: Der eingegebene Payment Confirmation Code wurde nicht erkannt
+    invalid_one_time_password: Das eingegebene Einmalpasswort war nicht gültig
+    not_profile: Die ausgewählte Datei war kein Profil
+    not_catalogue: Die ausgewählte Datei war kein Katalog
+    license_not_parsable: Die ausgewählte Datei war keine Lizenzschlüsseldatei
+    xml_invalid_input: Die XML-Datei enthält ungültige Eingaben
+    havent_created_yet: Keine %{title} wurden erstellt
+    havent_imported_yet: Keine %{title} wurden importiert
+    missing_dependency: Führen Sie diese Aktion aus, bevor Sie ein Assessment erstellen
+    active_partner_not_found: Aktiver Partner mit der Rererenz %{manufacturing_site} nicht gefunden
+    assessment_not_found: Assessment nicht gefunden
+    assessment_in_progress: Der Partner arbeitet derzeit an diesem Assessment. Bitte warten Sie, bis Ihr Partner fertig ist.
+    downgrade_not_allowed: Downgrade eines Katalogs für das Werk %{title} ist unmöglich.
+  help:
+    assessment:
+      show:
+        aside:
+          toolbar: Bitte die Toolbar unten nutzen, um den Workflow zu steuern!
+        main: |
+#          *Actual help text will be supplied by Odette.*{:.boo style="color:firebrick"}
+#
+#          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+#          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+#          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+#          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+#          officia deserunt mollit anim id est laborum.
+      view: |
+        *Actual help text will be supplied by Odette.*{:.boo style="color:firebrick"}
+
+ #       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+#        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+#        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+#        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+#        officia deserunt mollit anim id est laborum.
+    dummy: |
+      *Actual help text will be supplied by Odette.*{:.boo style="color:firebrick"}
+
+#      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+#      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+#      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+#      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+#      officia deserunt mollit anim id est laborum.
+  helpers:  
+    search_box_reset_button:
+      hint: Suche und Sortierung zurücksetzten
+    page_entries_info:
+      more_pages:
+        display_entries: Es werden Einträge <b>%{first}&nbsp;-&nbsp;%{last}</b> von insgesamt <b>%{total}</b> angezeigt
+      one_page:
+        display_entries:
+          one: Es wird <b>1</b> Eintrag angezeigt
+          other: Es werden <b>alle %{count}</b> Einträge angezeigt
+          zero: Keine Einträge gefunden
+    submit:
+      answer:
+        create: Speichern
+        update: Speichern
+        reset: Antworten zurücksetzen
+      login_reminder:
+        create: Login zusenden
+      csv_import:
+        create: Daten Importieren
+  home:
+    index:
+      recent_companies:
+        zero: Keine Firmen
+        one: Neueste Firma
+        other: Neueste Firmen
+      recent_sites:
+        zero: Keine Werke
+        one: Neuestes Werk
+        other: Neuste Werke
+      recent_catalogs:
+        zero: Keine Kataloge
+        one: Neuester Katalog
+        other: Neueste Kataloge
+      recent_assessments:
+        zero: Keine Assessments
+        one: Neuestes Assessment
+        other: Neueste Assessments
+      create_account: einen Mandanten anlegen
+      no_account_html: Es ist kein Mandant vorhanden. Um diese Anwendung zu nutzen müssen Sie zuerst %{link}.
+      old_license_warning: Es wird eine alte Lizenz verwendet. Bitte aktualisieren Sie ihre Lizenz, um den vollen Funktionsumfang nutzen zu können.
+      ie_warning: Sie verwenden den Internet Explorer, der von dieser Anwendung leider nicht mehr unterstützt wird. Bitte verwenden Sie einen aktuelleren Browser
+      non_members: 
+        page_title: Willkommen bei MMOG.np
+        page_text: |
+          MMOG.np ist die Web-Anwendung für das Verwalten der MMOG/LE-Assessments.
+          Um einen Account für die Anwendung zu erstellen, müssen Sie eine Lizenz von Odette erhalten. 
+          Klicken Sie bitte auf den Link "Lizenz noch nicht bestellt", um eine Lizenz zu bestellen. 
+          Falls bereits ein Account für Ihr Unternehmen erstellt worden ist, 
+          können Sie sich mit Ihren Zugangsdaten anmelden, 
+          welche Ihnen von Ihrem Administrator zugewiesen worden sind.
+      members:
+        page_title: Willkommen in Ihrer MMOG-Anwendung
+        page_text: |
+          Wenn Sie ein neuer Nutzer sind, verwenden Sie bitte das Hilfe-Menü um zu den Benutzerhandbüchern zu gelangen.
+      button:
+        login: Anmelden
+        register: Registrieren
+      link:
+        buy_license_html: Lizenz noch nicht bestellt? Bitte %{link}
+        click_here: hier klicken
+      unauthorized: 
+        Sie haben keinen Zugriff auf diese Seite. Wenden Sie sich an Ihren Administrator, wenn Sie denken, 
+        dass Sie Zugriff haben sollten. (Wenn Sie zuvor Zugriff hatten, ist Ihre Sitzung möglicherweise abgelaufen. 
+        Bitte melden Sie sich erneut an.)
+    login_form:
+      already_registered_account: Mit bereits registriertem Account
+      wrong_password_or_username: Login oder Passwort ist nicht korrekt
+      log_in: Einloggen
+      register_link: Neuer Mandant
+      register_text: 
+        Bitte geben Sie den "Payment Confirmation Code" ein, den Sie von Odette in der Bestätigungsmail der 
+        Lizenzbestellung erhalten haben
+      register_title: Neuen Mandant anlegen
+      forgot_login: Anmeldedaten vergessen
+      payment_confirmation_code: Payment Confirmation Code
+  licenses:
+    index:
+      activate_license: Eine Lizenz aktivieren
+      activate_new_license: Neue Lizenz aktivieren
+      installation_id: Installations-ID
+      license_information: Lizenzinformation
+      licence_activation_key: Lizenzaktivierungsschlüssel
+      title: Lizenz
+      unlicensed: Bitte aktivieren Sie Ihre Lizenz, um Ihr Konto freizuschalten!
+      licence_activated: Aktivierung key wird erfolgreich angewendet!
+      apply: Aktivieren
+  pages:
+    back: Zurück
+    configure: Konfigurieren
+    confirm: Sind Sie sicher?
+    delete: Löschen
+    approval: Genehmigung umschalten
+    edit: Bearbeiten
+    save: Speichern
+    search: Suchen
+    show: Anzeigen
+    ok: Bestätigen
+    cancel: Abbrechen
+    close: Schließen
+    cannot_undone: Diese Aktion kann nicht rückgängig gemacht werden!
+    delete_body: Lösche %{title}
+    approval_body: Schalte Genehmigung von %{title} um
+    mfa_body_on: Sind Sie sicher, dass Sie die 2FA für das Konto %{title} aktivieren?
+    mfa_body_off: Sind Sie sicher, dass Sie die 2FA für das Konto %{title} deaktivieren?
+  phrase:
+    compliance:
+      na: N/A
+      na_approved: N/A genehmigt
+      na_not_approved: N/A nicht genehmigt
+      'no': Nicht erfüllt
+      'yes': Erfüllt
+    edited: Bearbeitet
+    help: Hilfe
+    info: Info
+    open: Öffnen
+    property: Eigenschaften
+    review: Überprüfung
+    save: Speichern
+    scroll_to_this_item: Zu diesem Item scrollen
+    table_of_content:
+      info: Klicken Sie auf die Buttons rechts neben den Titeln, um zu dem jeweiligen Element zu scrollen
+    survey: Befragung
+    value: Wert
+  simple_form:
+    error_notification:
+      default_message: 'Bitte beachten Sie die angezeigten Fehler'
+      assessment: 'Bitte beachten Sie die angezeigten Fehler'
+    'no': Nein
+    required:
+      mark: "*"
+      text: Pflichtfeld
+    'yes': Ja
+  sites:
+    edit:
+      title: Werk bearbeiten
+      errors:
+        limit_exceeded: 'Derzeit sind keine Lizenzen für Version %{cat_version}, die dieser Site zugewiesen werden können.'
+    index:
+      new: Neues Werk
+      placeholder: Bezeichnung oder Adresse
+      title: Werke
+      csv_export: CSV Export
+    new:
+      title: Neues Werk
+    form:
+      new_customer: Neuen Kunden hinzufügen
+      unlicensed_site: Unlizenziertes Werk
+  import:
+    catalog:
+      success: Katalog erfolgreich importiert
+      error: Der Katalog konnte nicht importiert werden.
+    profile:
+      not_found: Profil nicht gefunden
+  uploads:
+    assessment_result:
+      error: Das Assessment konnte nicht importiert werden!
+      error_no_site: Bitte wählen Sie das Werk aus, dem das Assessment zugeordnent werden soll.
+      success: Assessment erfolgreich importiert.
+      title: Assessmentresultate von Lieferant importieren
+      upload: Hochladen
+      import: Importieren
+      xml_file: XML Datei
+      catalogs: Kataloge
+    catalog:
+      error: Der Katalog konnte nicht importiert werden.
+      success: Katalog erfolgreich importiert
+      title: Katalog importieren
+      upload: Hochladen
+      xml_file: XML Datei
+    customer_response:
+      error: Kundenbewertung konnte nicht importiert werden
+      error_no_site: Bitte wählen sie ein Werk aus
+      success: Kundenbewertung wurde erfolgreich importiert.
+      title: Assessmentantwort von Kunde importieren
+      upload: Hochladen
+      xml_file: XML-Datei
+    historical_assessment:
+      error: Assessment konnte nicht importiert werden
+      error_no_site: Bitte wählen sie ein Werk aus
+      success: Assessment importiert
+      title: Historisches Assessment importieren
+      upload: Hochladen
+      xml_file: XML Datei
+    error_no_file: Bitte wählen Sie eine gültige Datei zum Hochladen aus.
+    error_not_xml: Die ausgewählte Datei hat kein XML Format.
+    file_too_large: Bitte stellen Sie sicher, dass eine XML Datei ausgewählt wurde.
+    license:
+      mail_validation_error: Mail wird bereits von einer anderen Firma verwendet
+      error: Lizenz konnte nicht importiert werden.
+      license_file: Lizenz Datei
+      success: Lizenz erfolgreich importiert
+      title: Lizenz importieren
+      upload: Hochladen
+    profile:
+      error: Profil konnte nicht importiert werden.
+      success: Profil erfolgreich importiert
+      title: Profil importieren
+      upload: Importieren
+      xml_file: XML-Datei
+  user_sessions:
+    new:
+      title: Login
+      unauthorized: Sie haben keinen Zugriff auf diese Seite. Wenden Sie sich an ihren Administrator, wenn Sie denken, dass Sie Zugriff haben sollten. (Wenn Sie zuvor Zugriff hatten, ist Ihre Sitzung möglicherweise abgelaufen. Bitte melden Sie sich erneut an.)
+    confirm:
+      title: Bitte gib dein Einmalpasswort ein
+      submit: Anmelden
+      cancel: Abbrechen
+      validation_code: Einmalpasswort
+  users:
+    edit:
+      title: Nutzer bearbeiten
+      linked_assessments: Verlinkte Assessments
+    index:
+      new: Neuer Nutzer
+      placeholder: Login, Name, E-Mail oder Werk
+      placeholder_select_role: Rolle wählen...
+      placeholder_select_active: Aktiv-Status wählen
+      active:
+        'true': Ja
+        'false': Nein
+      title: Nutzer
+      csv_export: CSV Export
+      mfa:
+        'true': 2FA deaktivieren
+        'false': 2FA aktivieren
+        confirm:
+          'true': 'Bei der Zwei-Faktor-Authentifizierung wird beim Anmelden ein Einmalpasswort an die E-Mail-Adresse
+          des Nutzers versendet, welcher für das erfolgreiche Anmelden benötigt wird.
+          Das Deaktivieren dieser Einstellung macht ihren Account unsicherer. Bitte beachten Sie, dass dies eine globale
+          Einstellung ist, die alle Nutzer dieses Accounts betrifft.'
+          'false': 'Bei der Zwei-Faktor-Authentifizierung wird beim Anmelden ein Einmalpasswort an die E-Mail-Adresse
+          des Nutzers versendet, welcher für das erfolgreiche Anmelden benötigt wird.
+          Das Aktivieren dieser Einstellung macht ihren Account sicherer. Bitte beachten Sie, dass dies eine globale
+          Einstellung ist, die alle Nutzer dieses Accounts betrifft.'
+        success_confirm: 2FA wurde erfolgreich aktiviert. Bitte loggen Sie sich jetzt erneut ein.
+    new:
+      title: Neuer Nutzer
+    revise:
+      title: Überarbeiten
+      submit: Speichern
+    destroy:
+      deleted_user: gelöschter Benutzer
+  action_plans:
+    action_plans_search_form:
+      <<: *assessments_search_form
+      perspective:
+        customer: Assessments von Lieferanten
+        supplier: Assessments für Kunden
+    title: Aktionspläne
+    result_not_found: Actionpläne nicht gefunden!
+    index:
+      hint_view:
+        none: Um Actionpläne anzuzeigen, wählen Sie bitte die erforderliche Ansicht aus und wählen Sie oder geben Sie die entsprechende Site ein. Zusätzliche Suchparameter können ebenfalls eingegeben oder ausgewählt werden.
+        customer: Um Actionpläne anzuzeigen, geben Sie bitte den Manufacturing Code des Lieferanten ein. Zusätzliche Suchparameter können ebenfalls eingegeben oder ausgewählt werden.
+        supplier: Um Actionpläne anzuzeigen, wählen Sie bitte eine Site aus. Zusätzliche Suchparameter können ebenfalls eingegeben oder ausgewählt werden.
+
+  login_reminders:
+    new:
+      title: Anmeldedaten vergessen
+      help:
+        title: Anmeldedaten vergessen
+        content: |
+          Geben Sie die E-Mail-Addresse an, unter der Sie registriert sind.
+          Sie werden eine E-Mail mit Ihrem Benutzernamen erhalten,
+          sowie einem Link, mit dem Sie Ihr Passwort zurücksetzen können.
+    create:
+      success: "E-Mail mit Login-Erinnerung an %{email} gesendet"
+    edit:
+      title: Passwortänderung
+      invalid_link: Ungültiger oder abgelaufener Passwort-Reset-Link!
+      help:
+        title: Passwortänderung
+        content: |
+          Geben Sie Ihr neues Passwort ein.
+          Beachten Sie, dass das Passwort mindestens 8 Zeichen lang sein muss.
+          Bitte nur Buchstaben, Zahlen, Leerzeichen und .-_@ verwenden.
+    update:
+      success: 'Passwort geändert'
+  csv_imports:
+    show:
+      title: 'Import von %{type}'
+      partner_companies: Partner-Firmen
+      own_sites: eigenen Werken
+      both: eigenen Werken order Partner-Firmen
+      success: '%{count} %{type} erfolgreich importiert'
+      redundancy: 
+        one: 'Es wurde ein Duplikat gefunden.'
+        other: 'Es wurden %{count} Duplikate gefunden.'
+
+  locales:
+    all:
+      select_data_language: "Auswahl der Sprache des Assessemnts"
+
+  views:
+    menu:
+      log_in: Anmelden
+      log_out: "Abmelden (%{account}: %{username})"
+      home: Start
+      resources: Ressourcen
+      catalogs: Kataloge
+      assessments: Assessments
+      users: Nutzer
+      companies: Firmen
+      sites: Werke
+      license: Lizenz
+      help: Hilfe
+      about_mmog: Über MMOG/LE
+      about_odette: Über Odette International
+      language: Sprache
+      more_languages: Mehr Sprachen...
+      use_browser_lang: Browsersprache verwenden
+      perspective: Ansicht
+      analytics: Analytics
+      export: Export
+    pagination:
+      first: Erste
+      last: Letzte
+      next: Nächste
+      previous: Vorherige
+    perspective:
+      menu:
+        none: Beide Ansichten
+        customer: Ich bin Kunde
+        supplier: Ich bin Lieferant
+      customer: Meine Kunden
+      supplier: Meine Lieferanten
+
+  application:
+    main_menu:
+      view: Bearbeiten
+      title_company: Meine Firma
+      title_partner: Partner
+      title_assessment: Assessments
+      manage_companies: Lieferanten/Kunden
+      customers: Kunden
+      suppliers: Zulieferer
+      catalogs_and_profiles: Verfügbare Kataloge und Profile
+      manage_assessments: Assessments verwalten
+      customer_assessments: Kunden-Assessments
+      supplier_assessments: Lieferanten-Assessments
+      exchange_mailbox: Austausch Mailbox
+    please_wait: Bitte warten ...
+
+  # Translations needed in JS - will be automatically pushed to gon.t.
+  gon:
+    dirty_exit_warning: 'Achtung: Nicht gespeicherte Änderungen werden verloren gehen, wenn Sie jetzt die Seite verlassen!'
+    dirty_download_warning: 'Achtung: Nicht gespeicherte Änderungen werden NICHT im Download enthalten sein!'
+    dirty_exchange_warning: 'Achtung: Nicht gespeicherte Änderungen werden NICHT in der Mail enthalten sein!'
+    dirty_default_warning: 'Achtung: Nicht gespeicherte Änderungen werden verloren gehen!'
+    archive_warning: 'Das Assessment kann nicht mehr verändert werden, sobald es archiviert ist. Möchtest Sie das Assessmment trotzdem archivieren?'
+
+  recaptcha:
+    errors:
+      verification_failed: 'Captcha-Überprüfung fehlgeschlagen!'
+
+  authlogic:
+    error_messages:
+      login_blank: Darf nicht leer sein!
+      login_not_found: ungültig
+      login_invalid: Bitte nur Buchstaben, Zahlen, Leerzeichen und .-_@ verwenden.
+      consecutive_failed_logins_limit_exceeded: Das Limit für falsche Anmeldeversuche ist überschritten. Das Benutzerkonto ist gesperrt.
+      email_invalid: Ungültige E-Mail-Adresse.
+      email_invalid_international: Ungültige E-Mail-Adresse.
+      password_blank: Das Passwort darf nicht leer sein
+      password_invalid: Ungültiges Passwort
+      not_active: Das Benutzerkonto ist nicht aktiv.
+      not_confirmed: Das Benutzerkonto ist (noch) nicht bestätigt.
+      not_approved: Das Benutzerkonto wurde nicht genehmigt.
+      no_authentication_details: Zum Anmelden benutzen Sie bitte den Benutzernamen und das Passwort, das Sie von Ihrem Administrator erhalten haben.
+      general_credentials_error: Benutzername/Passwort-Kombination ist ungültig    
+
+  # CanCanCan authorization error messages
+  unauthorized:
+    create:
+      company: Ihre Lizenz und Rolle erlauben Ihnen nicht, neue Firmen anzulegen. 
+      site: Ihre Lizenz und Rolle erlauben Ihnen nicht, neue Sites anzulegen. 
+    update:
+      company: Ihre Lizenz und Rolle erlauben Ihnen nicht, Firmen zu modifizieren.
+      site: Ihre Lizenz und Rolle erlauben Ihnen nicht, Sites zu modifizieren.

@@ -1,0 +1,43 @@
+.assessments-controller, .accounts-controller, .companies-controller
+
+	// ------------------------------------------------------------------------------------------
+	// Search form simple/advanced visibility rules
+
+	#search_form[role=simple]
+		#advanced_search_form
+			display: none
+	#search_form[role=advanced]
+		#simple_search_form
+			display: none
+
+#search_form, #advanced_search_form, #simple_search_form
+	fieldset
+		margin-top: 1em
+	.medium-2, .medium-3, .medium-4, .medium-6
+		margin: 0 0 1rem
+		position: relative
+		display: flex
+		align-items: center
+		.floating_label, .with_blank
+			margin-left: 10px
+			margin-top: -1rem
+			font-size: 16px
+			position: absolute
+			pointer-events: none
+			transition: all 0.1s ease
+		.floating_label
+			color: #cacaca
+		.with_blank
+			color: transparent
+		.selected,
+		input:not(:placeholder-shown) + .floating_label
+			position: absolute
+			margin-top: -4.5rem
+			margin-left: 0px
+			font-size: 11px
+			opacity: 1
+			color: #404040
+
+	.medium-5, .medium-7, .medium-12
+		@extend .medium-3
+		justify-content: flex-end

@@ -1,0 +1,187 @@
+en:
+  pagination:
+    first: First
+    last: Last
+    next: Next
+    previous: Previous
+    table_entries:
+      start: Displaying entries
+      middle: of
+      end: in total
+
+  assessment_memos:
+    index:
+      # Consider to FIXME: Give this more structure, ex. group table column names/fields under one node
+      title: Incoming Assessments
+      no_timestamp_html: '<em>(no time stamp)</em>'
+      no_sender_html: '<em>(no sender)</em>'
+      no_subject_html: '<em>(no subject)</em>'
+      blank_field_html: '<em>(no %{field})</em>'
+      incoming_assessment_title: Incoming assessments
+      other_mails_title: Other mails
+      import: import
+      no_memos: No memos
+      timestamp: Timestamp
+      subject: Subject
+      sender: Sender
+      manufacturing_site: Manufacturing site
+      shipping_site: Shipping site
+      sender_role: From
+      sender_user_email: Sender user email
+      from: From
+      xml_import: XML Import
+      full_import: Full Import
+      site_unknown: Site is unknown
+      site_title: Receiver
+      error_missing_mail_config: Missing mail configuration to accesss incoming assessments
+      import_individually: Import individually
+      import_anyway: Import anyway
+      ok: OK
+      import_and_update_mailbox: Update mailbox and import
+      catalogue: Catalogue
+    search:
+      button_text: Search
+      reset_hint: Reset search and sorting
+      placeholder: Sender, Email, Subject, Catalogue, From, Man. or Ship. Code
+    assessment_memo:
+      title: Import %{title}
+      from: From %{sender}
+      import: Import
+      site: Site
+      required: required
+      delete:
+        title: Delete
+        subtitle: Are you sure, you want to delete this mail?
+        ok: Delete mail
+        cancel: Cancel
+    pagination:
+      table_entries:
+        start: Displaying entries
+        middle: of
+        end: in total
+      first: First
+      previous: Previous
+      next: Next
+      last: Last
+    import:
+      error: There was an error importing the assessment
+      error_no_site: Please import this assessment individually in order to assign it to a site.
+      incompatible_versions: Importing this assessment will overwrite your changes. Click button to import anyway! 
+      incompatible_catalog_versions: The assessment already exists with another version. To import anyway, please delete the existing assessment before.
+      successfully_imported: '%{title} was imported successfully'
+      duplicate_assessment:  'This assessment has already been imported with another manufacturing site code
+                              %{manufacturing_site}. You cannot import it again with a different manufacturing site code.'
+      cant_update_deleted_assessment: Associated Assessment for feedback not found
+    tooltips:
+      import_assessment: Import assessment
+      forward_mail: Forward mail
+      delete_mail: Delete mail
+      imported: Assessment successfully imported
+      forwarded: Mail successfully forwarded
+      bulk_import: Import all assessments on this page
+      loading: Loading
+      refresh: Refresh table
+      csv_export: CSV Export
+  activemodel:
+    models:
+      assessment_memo: Assessment Memo
+    attributes:
+      assessment_memo:
+        timestamp: Timestamp
+  vue:
+    errors:
+      unknown: An unexpected Error occurred!
+
+de:
+  pagination:
+    first: Erste
+    last: Letzte
+    next: Nächste
+    previous: Vorherige
+    table_entries:
+      start: Zeige Einträge
+      middle: von
+      end: ''
+
+  assessment_memos:
+    index:
+      title: Eingehende Assessments
+      no_timestamp_html: '<em>(kein Zeitstempel)</em>'
+      no_sender_html: '<em>(kein Absender)</em>'
+      no_subject_html: '<em>(kein Betreff)</em>'
+      blank_field_html: '<em>(Kein %{field})</em>'
+      incoming_assessment_title: Eingehende Assessments
+      other_mails_title: Andere Mails
+      import: importieren
+      no_memos: Keine Memos
+      timestamp: Zeitstempel
+      subject: Betreff
+      sender: Absender
+      manufacturing_site: Produktionsstätte
+      shipping_site: Versandstelle
+      sender_role: Von
+      sender_user_email: Nutzer-Email des Absenders
+      from: Von
+      xml_import: XML Import
+      full_import: Voller Import
+      site_unknown: Werk ist unbekannt
+      site_title: Empfänger
+      error_missing_mail_config: Fehlende Mail-Einstellungen, um eingehende Assessments abzurufen
+      import_individually: Individuell importieren
+      import_anyway: Trotzdem importieren
+      ok: OK
+      import_and_update_mailbox: Aktualisiere Mailbox Adresse und importiere
+      catalogue: Katalog
+    search:
+      button_text: Suchen
+      reset_hint:  Setze Suche und Sortierung zurück
+      placeholder: Absender, Email, Betreff, Katalog, Von, Produktstätte oder Versandstelle
+    assessment_memo:
+      title: Importiere %{title}
+      from: Von %{sender}
+      import: Importieren
+      site: Werk
+      required: Pflichtfeld
+      delete:
+        title: Löschen
+        subtitle: Bist du sicher, dass du diese Mail unwiderruflich löschen willst?
+        ok: Mail löschen
+        cancel: Abbrechen
+    pagination:
+      table_entries:
+        start: Zeige Einträge
+        middle: von
+        end: ''
+      first: Erste Seite
+      previous: Vorherige Seite
+      next: Nächste Seite
+      last: Letzte Seite
+    import:
+      error: Es ist ein Fehler beim Importieren des Assessments aufgetreten
+      error_no_site: Bitte importieren Sie dieses Assessment einzeln, damit Sie es einem Werk zuordnen.
+      incompatible_versions: Durch das Importieren des Assessments werden die letzten Änderungen überschrieben. Auf Button klicken, um das Assessment dennoch zu importieren!
+      incompatible_catalog_versions: Das Assessment gibt es bereits mit einer anderen Version. Um es dennoch zu importieren, löschen Sie bitte das existierende Assessment.
+      successfully_imported: '%{title} wurde erfolgreich importiert'
+      duplicate_assessment: 'Dieses Assessment wurde bereits erfolgreich mit einer anderen Produktionsstätte 
+                            %{manufacturing_site} importiert. Sie können dieses Assessment nicht mit einer anderen
+                            Produktionsstätte importieren'
+      cant_update_deleted_assessment: Verknüpftes Assessment für Feedback nicht gefunden
+    tooltips:
+      import_assessment: Assessment importieren
+      forward_mail: Mail weiterleiten
+      delete_mail: Mail löschen
+      imported: Assessment erfolgreich importiert
+      forwarded: Mail erfolgreich weitergeleitet
+      bulk_import: Alle Assessments auf dieser Seite importieren
+      loading: Lädt
+      refresh: Tabelle aktualisieren
+      csv_export: CSV Export
+  activemodel:
+    models:
+      assessment_memo: Assessment Memo
+    attributes:
+      assessment_memo:
+        timestamp: Zeitstempel
+  vue:
+    errors:
+      unknown: Ein unerwarter Fehler ist aufgetreten!

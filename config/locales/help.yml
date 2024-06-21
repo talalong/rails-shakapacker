@@ -1,0 +1,446 @@
+en:
+  # Base URL where the tutorials in this language are stored
+  # CAVEAT: This URL *must* end with a trailing slash!
+  #
+  # URLs to individual tutorials below can have the following formats:
+  # - relative/path : path relative to external_tutorials_base_url
+  # - /absolute/path : /path_in_domain_of_external_tutorials_base_url
+  # - http://some.domain.com/path/to/tutorial : absolute URL
+
+  external_tutorials_base_url: http://www.odette.org/mmoghelp/en/
+
+  # Global tutorial links for the help menu; They appear on *every* page
+  application:
+    main_menu:
+      tutorials: {} # must be present, but can be empty
+        # Tutorial links in help menu; Both keys and values are editable.
+        # Application Tutorial: tutorial # empty string means it is the same as the base url
+      # Assessment Definition: https://en.wikipedia.org/wiki/Assessment
+    footer:
+      # Links related to legal formalities
+      # Keys are titles and can be edited. 
+      # Values must use absolute URLs. 
+      # 'legal:' must NOT be removed, but can be empty (i.e. legal: {})
+      legal:
+        Application Terms of Use: https://www.odette.org/mmognp/mmog.pdf
+        General Terms & Conditions: https://www.odette.org/mmognp/mmog.pdf
+        Privacy Policy: https://www.odette.org/mmognp/mmog.pdf
+        Cookies: https://www.odette.org/mmognp/mmog.pdf
+      # Links related to social networking
+      # Keys MUST NOT be edited.
+      # Values must use absolute URLs.
+      # 'social:' MUST NOT be removed, but can be empty (i.e. social: {})
+      social:
+        LinkedIn: http://www.linkedin.com/company/odette-international
+        Twitter: https://twitter.com/OdetteInt
+        YouTube: https://www.youtube.com/@odetteinternational4828
+
+  # Tutorial links for the home page
+  home:
+    index:
+      tutorials: # must be present, but can be empty
+        Quick Start Guide: https://www.odette.org/mmognp/mmog.pdf
+        User manuals: https://www.odette.org/mmognp/mmog.pdf
+        Introduction MMOG/LE: https://www.odette.org/mmognp/mmog.pdf
+        About AIAG: https://www.aiag.org
+
+  # Below are tutorial links for various resource views
+  # The principle structure follows this pattern:
+  #
+  #  resource:
+  #    view:
+  #      tutorials: # must be present, but can be empty
+  #        Help Menu Item Text: tutorial url or path relative to the external_tutorials_base_url value above
+  #        Another Menu Item: another url
+  #    another_view:
+  #      # Example of an empty tutorials element. Never delete a tutorial element! Set it to empty instead. 
+  #      tutorials: {}
+
+  user_sessions: # a.k.a. login
+    new:
+      tutorials: {} # must be present, but can be empty
+
+  login_reminders:
+    new:
+      tutorials: {} # must be present, but can be empty
+    edit:
+      tutorials: {} # must be present, but can be empty
+
+  licenses:
+    index:
+      tutorials:
+        How to get a licence key: 1_mmog_ug_licence_key_en.html
+
+  accounts:
+    index:
+      tutorials: {}
+    new:
+      tutorials:
+        How to register: 1_mmog_ug_setup_registration_en.html
+
+  users:
+    index:
+      tutorials:
+        How to create a new user: 1_mmog_ug_setup_user_en.html
+    new:
+      tutorials:
+        How to create a new user: 1_mmog_ug_setup_user_en.html
+    edit:
+      tutorials:
+        How to create a new user: 1_mmog_ug_setup_user_en.html
+    form:
+      aside_help_sections: # must be present, but can be empty
+        Note: |
+          You should not delete users, if they have been actively involved 
+          in creating, maintaining or reviewing assessments.
+          Instead, you should deactivate the user by unticking
+          the "Active" box.
+        #Help 2: |
+        #  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        #  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        #  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        #  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        #  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        #  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  companies:
+    index:
+      tutorials:
+        How to setup your own company: 1_mmog_ug_setup_own_en.html
+        How to setup a customer: 1_mmog_ug_setup_customer_en.html
+        How to setup a supplier: 1_mmog_ug_setup_supplier_en.html
+    new:
+      tutorials:
+        How to setup your own company: 1_mmog_ug_setup_own_en.html
+        How to setup a customer: 1_mmog_ug_setup_customer_en.html
+        How to setup a supplier: 1_mmog_ug_setup_supplier_en.html
+    show:
+      tutorials:
+        How to setup your own company: 1_mmog_ug_setup_own_en.html
+    edit:
+      tutorials: {}
+    form: # contained in both 'show' and 'new' view
+      aside_help_sections: {} # must be present, but can be empty
+
+  sites:
+    index:
+      tutorials: # must be present, but can be empty
+        How to setup a site: 1_mmog_ug_setup_site_en.html
+    new:
+      tutorials: # must be present, but can be empty
+        How to setup a site: 1_mmog_ug_setup_site_en.html
+    show:
+      tutorials: {} # must be present, but can be empty
+    edit:
+      tutorials: {} # must be present, but can be empty
+    form: # contained in both 'show' and 'new' view
+      aside_help_sections: {} # must be present, but can be empty
+
+  csv_imports:
+    show:
+      tutorials: # must be present, but can be empty
+        How to bulk-import partners: 1_mmog_ug_import_partners_en.html
+        How to bulk-import own sites: 1_mmog_ug_import_sites_en.html
+      site:
+        tutorials:
+          How to bulk-import own sites: 1_mmog_ug_import_sites_en.html
+      company:
+        tutorials:
+          How to bulk-import partners: 1_mmog_ug_import_partners_en.html
+  
+  catalogs:
+    index:
+      tutorials: # must be present, but can be empty
+        How to get catalogue and profile data: 1_mmog_ug_import_catalogue_en.html
+        #Specific tutorial section: dummy#section
+    show:
+      tutorials: {} # must be present, but can be empty
+
+  assessments:
+    index:
+      tutorials: # must be present, but can be empty
+        How to create a new assessment: 2_mmog_ug_create_new_ass_en.html
+        How to deal with customer feedback: 2_mmog_ug_proc_cust_feed_en.html
+        How to review supplier assessments: 2_mmog_ug_rev_supp_ass_en.html
+        How to import historical assessments: 2_mmog_ug_imp_hist_ass_en.html
+    new:
+      tutorials: # must be present, but can be empty
+        How to create a new assessment: 2_mmog_ug_create_new_ass_en.html
+    duplicate:
+      tutorials: # must be present, but can be empty
+        How to create a new assessment: 2_mmog_ug_create_new_ass_en.html
+    show:
+      tutorials: # must be present, but can be empty
+        Assessments overview: 2_mmog_ug_ass_overview_en.html
+        How to complete an assessment: 2_mmog_ug_create_new_ass_en.html
+        How to compare assessments: 2_mmog_ug_compare_ass_en.html
+        How to deal with customer feedback: 2_mmog_ug_proc_cust_feed_en.html
+        How to review supplier assessments: 2_mmog_ug_rev_supp_ass_en.html
+        How to archive assessments: 2_mmog_ug_archive_en.html
+        Glossary: https://www.odette.org/mmognp/mmog.pdf
+    edit:
+      tutorials: {} # must be present, but can be empty
+    score:
+      tutorials: {} # must be present, but can be empty
+    chart:
+      tutorials: {} # must be present, but can be empty
+    progression:
+      tutorials: {} # must be present, but can be empty
+    history:
+      tutorials: {} # must be present, but can be empty
+    export:
+      tutorials:
+        Consolidate and export data: http://www.odette.org/mmoghelp/en/6_mmog_ug_Analytics_en.html
+    form: # contained in both 'show' and 'new' view
+      aside_help_sections: # must be present, but can be empty
+        Important: |
+          Enter your supplier numbers as assigned by your customer. 
+          When you enter the “Manufacturing site number” this number 
+          is added to the site record in the database (associated with 
+          the customer concerned). The next time you create an assessment 
+          for this site/customer couple, this number will be automatically 
+          selected. By default the shipping site number is the same as 
+          the manufacturing site number but can be changed at the assessment level.
+  action_plans:
+    index:
+      tutorials:
+        Display action plans: 6_mmog_ug_action_plans_en.html
+  # Assessment Page - Small help icons inside the answer/feedback forms
+  # DO NOT edit the keys, only the URLs
+  answers:
+    form:
+      help:
+        # upper help icon
+        survey:  9_mmog_provide_answers_en.html
+        # lower help icon
+        review: 9_mmog_provide_answers_en.html
+
+  assessment_memos:
+    index:
+      tutorials:
+        Import supplier assessment: 2_mmog_ug_mailbox_imp_supp_assessment_en.html
+        Import customer review: 2_mmog_ug_mailbox_imp_cust_review_en.html
+
+# =====================================================================================================================
+de:
+  # Base URL where the tutorials in this language are stored
+  # URLs to individual tutorials below can have the following formats:
+  # - relative/path : path relative to external tutorials base url
+  # - /absolute/path : /path_in_domain_of_external_tutorials_base_url
+  # - http://some.domain.com/path/to/tutorial : absolute URL
+  external_tutorials_base_url: http://www.odette.org/mmoghelp/en/
+
+  # Global tutorial links for the help menu; They appear on *every* page
+  application:
+    main_menu:
+      tutorials: {} # must be present, but can be empty
+
+    footer:
+      # Links related to legal formalities
+      # Keys are titles and can be edited. 
+      # Values must use absolute URLs. 
+      # 'legal:' must NOT be removed, but can be empty (i.e. legal: {})
+      legal:
+        Application Terms of Use: https://www.odette.org/mmognp/mmog.pdf
+        General Terms & Conditions: https://www.odette.org/mmognp/mmog.pdf
+        Privacy Policy: https://www.odette.org/mmognp/mmog.pdf
+        Cookies: https://www.odette.org/mmognp/mmog.pdf
+      # Links related to social networking
+      # Keys MUST NOT be edited.
+      # Values must use absolute URLs.
+      # 'social:' MUST NOT be removed, but can be empty (i.e. social: {})
+      social:
+        LinkedIn: http://www.linkedin.com/company/odette-international
+        Twitter: https://twitter.com/OdetteInt
+        YouTube: https://www.youtube.com/@odetteinternational4828
+
+  # Tutorial links for the home page
+  home:
+    index:
+      tutorials: # must be present, but can be empty
+        Schnellstart Guide: https://www.odette.org/mmognp/mmog.pdf
+        User Manuals: https://www.odette.org/mmognp/mmog.pdf
+        Einführung MMOG/LE: https://www.odette.org/mmognp/mmog.pdf
+        Über AIAG: https://www.aiag.org
+        
+  # Below are tutorial links for various resource views
+  # The principle structure follows this pattern:
+  #
+  #  resource:
+  #    view:
+  #      tutorials: # must be present, but can be empty
+  #        Help Menu Item Text: tutorial url or path relative to the external_tutorials_base_url value above
+  #        Another Menu Item: another url
+  #    another_view:
+  #      # Example of an empty tutorials element. Never delete a tutorial element! Set it to empty instead. 
+  #      tutorials: {}
+
+  user_sessions: # a.k.a. login
+    new:
+      tutorials: {} # must be present, but can be empty
+
+  login_reminders:
+    new:
+      tutorials: {} # must be present, but can be empty
+    edit:
+      tutorials: {} # must be present, but can be empty
+
+  licenses:
+    index:
+      tutorials:
+        # <a name="3">
+        How to get a licence key: 1_mmog_ug_licence_key_en.html
+
+  accounts:
+    index:
+      tutorials: {} # must be present, but can be empty
+        # How to register: 1_mmog_ug_setup_registration
+      # Specific tutorial section: dummy#section
+    new:
+      tutorials: # must be present, but can be empty
+        How to register: 1_mmog_ug_setup_registration_en.html
+
+  users:
+    index:
+      tutorials: # must be present, but can be empty
+        How to create a new user: 1_mmog_ug_setup_user_en.html
+    new:
+      tutorials: # must be present, but can be empty
+        How to create a new user: 1_mmog_ug_setup_user_en.html
+    edit:
+      tutorials: # must be present, but can be empty
+        How to create a new user: 1_mmog_ug_setup_user_en.html
+    form: # contained in both 'show' and 'new' view
+      aside_help_sections: # must be present, but can be empty
+        Note: |
+          Sie sollten Nutzer nicht löschen, wenn diese aktiv an der Erzeugung
+          und Bearbeitung von Assessments beteiligt waren.
+          Stattdessen sollten Sie das Benutzer-Konto deaktivieren, indem
+          Sie das Häkchen im Kästchen "Aktiv" entfernen.
+        #Help 2: |
+        #  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        #  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        #  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        #  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        #  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        #  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  companies:
+    index:
+      tutorials: # must be present, but can be empty
+        How to setup your own company: 1_mmog_ug_setup_own_en.html
+        How to setup a customer: 1_mmog_ug_setup_customer_en.html
+        How to setup a supplier: 1_mmog_ug_setup_supplier_en.html
+    new:
+      tutorials: # must be present, but can be empty
+        How to setup your own company: 1_mmog_ug_setup_own_en.html
+        How to setup a customer: 1_mmog_ug_setup_customer_en.html
+        How to setup a supplier: 1_mmog_ug_setup_supplier_en.html
+    show:
+      tutorials: # must be present, but can be empty
+        How to setup your own company: 1_mmog_ug_setup_own_en.html
+    edit:
+      tutorials: {} # must be present, but can be empty
+
+    form: # contained in both 'show' and 'new' view
+      aside_help_sections: {} # must be present, but can be empty
+
+  sites:
+    index:
+      tutorials: # must be present, but can be empty
+        How to setup a site: 1_mmog_ug_setup_site_en.html
+    new:
+      tutorials: # must be present, but can be empty
+        How to setup a site: 1_mmog_ug_setup_site_en.html
+    show:
+      tutorials: {} # must be present, but can be empty.html
+    edit:
+      tutorials: {} # must be present, but can be empty.html
+    form: # contained in both 'show' and 'new' view
+      aside_help_sections: {} # must be present, but can be empty
+
+  csv_imports:
+    show:
+      tutorials: # must be present, but can be empty
+        How to bulk-import partners: 1_mmog_ug_import_partners_en.html
+        How to bulk-import own sites: 1_mmog_ug_import_sites_en.html
+      site:
+        tutorials:
+          How to bulk-import own sites: 1_mmog_ug_import_sites_en.html
+      company:
+        tutorials:
+          How to bulk-import partners: 1_mmog_ug_import_partners_en.html
+
+  catalogs:
+    index:
+      tutorials: # must be present, but can be empty
+        How to get catalogue and profile data: 1_mmog_ug_import_catalogue_en.html
+        #Specific tutorial section: dummy#section
+    show:
+      tutorials: {}
+  assessments:
+    index:
+      tutorials: # must be present, but can be empty
+        How to create a new assessment: 2_mmog_ug_create_new_ass_en.html
+        How to deal with customer feedback: 2_mmog_ug_proc_cust_feed_en.html
+        How to review supplier assessments: 2_mmog_ug_rev_supp_ass_en.html
+        How to import historical assessments: 2_mmog_ug_imp_hist_ass_en.html
+    new:
+      tutorials: # must be present, but can be empty
+        How to create a new assessment: 2_mmog_ug_create_new_ass_en.html
+    duplicate:
+      tutorials: # must be present, but can be empty
+        How to create a new assessment: 2_mmog_ug_create_new_ass_en.html
+    show:
+      tutorials: # must be present, but can be empty
+        Assessments overview: 2_mmog_ug_ass_overview_en.html
+        How to complete an assessment: 2_mmog_ug_create_new_ass_en.html
+        How to compare assessments: 2_mmog_ug_compare_ass_en.html
+        How to deal with customer feedback: 2_mmog_ug_proc_cust_feed_en.html
+        How to review supplier assessments: 2_mmog_ug_rev_supp_ass_en.html
+        How to archive assessments: 2_mmog_ug_archive_en.html
+        Glossary: https://www.odette.org/mmognp/mmog.pdf
+    edit:
+      tutorials: {}
+    score:
+      tutorials: {}
+    chart:
+      tutorials: {}
+    progression:
+      tutorials: {}
+    history:
+      tutorials: {}
+    export:
+      tutorials:
+        Consolidate and export data: http://www.odette.org/mmoghelp/en/6_mmog_ug_Analytics_en.html
+    form: # contained in both 'show' and 'new' view
+      aside_help_sections: # must be present, but can be empty
+        Important: |
+          Geben Sie die Lieferantennummer an, die Ihnen von Ihrem 
+          Kunden zugewiesen wurde. Wenn Sie die Produktionsstätte angeben, wird diese 
+          dem Datensatz Ihrer Site (Werk) zugeordnet und mit dem
+          betreffenden Kunden assoziiert. Wenn Sie das nächste Mal
+          ein Assessment für diesen Kunden anlegen, wird diese Nummer 
+          automatisch ausgewählt und zugeordnet. Die Versandstelle ist 
+          per default die selbe Nummer wie die Produktionsstätte, 
+          kann aber auf Ebene des Assessments geändert werden.
+  # Assessment Page - Small help icons inside the answer/feedback forms
+  # DO NOT edit the keys, only the URLs
+  answers:
+    form:
+      help:
+        # upper help icon
+        survey:  9_mmog_provide_answers_en.html
+        # lower help icon
+        review: 9_mmog_provide_answers_en.html 
+
+  assessment_memos:
+    index:
+      tutorials:
+        Import supplier assessment: 2_mmog_ug_mailbox_imp_supp_assessment_en.html
+        Import customer review: 2_mmog_ug_mailbox_imp_cust_review_en.html
+        
+  action_plans:
+    index:
+      tutorials:
+        Action plans anzeigen: 6_mmog_ug_action_plans_en.html
