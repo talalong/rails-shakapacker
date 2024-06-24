@@ -17,7 +17,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.sass']
+        extensions: ['.sass', '.scss']
     }
 }
 
