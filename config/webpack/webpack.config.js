@@ -1,15 +1,24 @@
 // See the shakacode/shakapacker README and docs directory for advice on customizing your webpackConfig.
-const { generateWebpackConfig, merge } = require('shakapacker')
+const {generateWebpackConfig, merge} = require('shakapacker')
 
-const webpackConfig = generateWebpackConfig()
+const path = require('path');
+
+const customConfig = {
+    resolve: {
+        alias: {
+            '@actions': path.resolve(__dirname, '../../app/javascript/src/actions'),
+        },
+        extensions: ['.css', '.js', '.scss'],
+    }
+};
+
+const webpackConfig = generateWebpackConfig(customConfig)
 
 const yamlConfig = require('./rules/yaml')
-const sassConfig = require('./rules/sass')
-const extensionsConfig = require('./rules/extensions')
-const foundationConfig = require('./rules/foundation')
-/*console.log('--------->')
-console.log(webpackConfig.module.rules)
-console.log('<---------')
-sss
-process.exit(1)*/
-module.exports = merge(yamlConfig, foundationConfig, sassConfig, webpackConfig)
+const jqueryPlugin = require('./plugins/jquery')
+
+module.exports = merge(webpackConfig, yamlConfig, jqueryPlugin, {
+    resolve: {
+        extensions: ['.scss']
+    }
+})

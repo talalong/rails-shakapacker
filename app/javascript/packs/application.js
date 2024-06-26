@@ -13,4 +13,6 @@
 //
 // const images = require.context('./images', true)
 // const imagePath = (name) => images(name, true)
-import 'foundation-datepicker/js/foundation-datepicker';
+// import 'foundation-datepicker/js/foundation-datepicker';
+
+import '../styles/application.sass'
