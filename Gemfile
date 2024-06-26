@@ -65,6 +65,4 @@ end
 # Compiler frontend, successor of webpacker which has been retired
 gem "shakapacker", "= 8.0"
 
-gem "foundation-rails"
-
 gem "coffee-rails"
