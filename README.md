@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+[![coverage report](https://gitlab.cgi-berlin.cloud/odette/mmog-le/badges/develop/coverage.svg)](https://gitlab.cgi-berlin.cloud/odette/mmog-le/-/commits/develop) 
